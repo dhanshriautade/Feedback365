@@ -1,0 +1,60 @@
+<div class="full-width">
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-2"></div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-8 main">
+            <img src="/assets/logo/360Logo.png" class="bgimg">           
+            <p-card class="login_card">
+                <div class="example-form">
+                    <div class="logo_name">
+                        Feedback
+                    </div>
+                    <span>
+                        Please select your account
+                    </span>
+                    <div class="my-2">
+                        <button class="ActiveAllUser" [ngClass]="activeAllUsers ? '' : 'ActiveAllUser activeUserList'"
+                            (click)="myTeamView(0)">Admin</button>
+                        <button class="DeactiveAllUser" [ngClass]="activeAllUsers ? 'ActiveAllUser activeUserList' : ''"
+                            (click)="myTeamView(1)">Employee</button>
+                    </div>
+                    <div class=" tag row my-2">
+                        <label for="name">User Name / ID</label>
+                        <input type="text" class="form-control" placeholder="youremail@gmail.com">
+                    </div>
+                    <div class="tag row my-2">
+                            <label for="name">Password</label>
+                            <input type="text" class="form-control" placeholder="*********">
+                    </div>
+                    <div class="my-2">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6"></div>
+                                <div class="col-sm-6 col-md-6">
+                                        <a>Forgot Password?</a>
+                                </div>
+                             </div>
+
+                    </div>
+                    <div class="my-4">
+                            <button class="btn btn-primary" type="submit">Login </button>
+
+                    </div>
+                    <div class="my-3">
+                        
+                                <img src="/assets/logo/beauto.png" class="footer">
+                                @ BEAUTO System Pvt. Ltd. | <a> Terms</a>
+                     
+                    </div>
+                    <div class="my-3">
+                            <img class="fb mr-4" src="../../../assets/logo/fb.svg">
+                            <img class="twitter mr-4" src="../../../assets/logo/twitter.png">
+                            <img class="gmail mr-4" src="../../../assets/logo/gm.png">
+                    </div>
+                </div>
+
+            </p-card>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-2"></div>
+
+    </div>
+
+</div>
