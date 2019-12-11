@@ -20,20 +20,28 @@
 :host ::ng-deep .ui-card-body{
 padding: 0px !important;
 }
+:host ::ng-deep .ui-card{
+    border-radius: 17px;
+}
 
 .logo_name{
     background-color: #CFD8DC;
     height: 51px;
     padding: 12px;
+    border-radius: 17px 17px 0px 0px;
 }
 
 .ActiveAllUser {
+    height: 40px;
     padding: 5px 30px;
     border-radius: 50px;
     border: 1px #FCC612 solid;
     position: relative;
     z-index: 1;
-  
+    background-color: #90A4AE;
+    font-weight: 700;
+    color: white;
+   
 }
 .fb{
         width: 17px;
@@ -60,17 +68,23 @@ button{
     padding: 0px 95px 0px 95px;
 }
 .DeactiveAllUser {
-    padding: 5px 30px;
+    height: 40px;
+    padding: 5px 56px;
     border-radius: 50px;    
     border: 1px #90A4AE solid;
-    margin-left: -13%;
+    margin-left: -11%;
     color: white;
     position: relative;
     z-index: 1;
+    font-weight: 700;
+    background-color: #90A4AE;
 }
 
 .activeUserList{
     background: #FCC612;
-    color: black;;
+    // color: black;;
     z-index: 10;
+    color: #7c7171;
+    font-weight: 700;
+  
 }

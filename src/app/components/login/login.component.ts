@@ -12,7 +12,6 @@ export class LoginComponent implements OnInit {
 
   myTeamView(flag) {
     // this.activeAllUsers = false;
-    debugger;
     if (flag === 1) {
         this.activeAllUsers = true;
     }
