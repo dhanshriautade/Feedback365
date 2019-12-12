@@ -1,91 +1,164 @@
 <div class="header">
-    <div class="row">
-        <div class="col-sm-2 col-md-3 col-lg-3 col-xl-2 col-3 logo">
-                <img src="/assets/logo/360Logo.png" class="bgimg">
-                Feedback
+  <div class="row">
+    <div class="col-sm-2 col-md-3 col-lg-3 col-xl-2 col-3 logo">
+      <img src="/assets/logo/360Logo.png" class="bgimg">
+      Feedback
+    </div>
+    <div class="col-sm-10 col-md-9 col-lg-9 col-xl-10 col-9 profile">
+      <div class="ui-inputgroup row">
+        <div class="col-sm-3">
+          <p-autoComplete [(ngModel)]="text" placeholder="Seach Employee or Help" [suggestions]="results"
+            (completeMethod)="search($event)"></p-autoComplete>
+          <button type="submit" pButton type="button" (click)="onComplete($event)" class="ui-button-warn">
+            <i class="pi pi-search" style="font-size: 1em"></i>
+          </button>
         </div>
-        <div class="col-sm-10 col-md-9 col-lg-9 col-xl-10 col-9 profile">
-                          <div class="ui-inputgroup row">
-                              <div class="col-sm-3">
-                                <p-autoComplete [(ngModel)]="text"   placeholder="Seach Employee or Help" [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete>
-                            <button type="submit" pButton type="button" (click)="onComplete($event)" class="ui-button-warn">
-                              <i class="pi pi-search"  style="font-size: 1em"></i>
-                            </button>
-                            </div>
-                          </div>
-                     
-                  
+      </div>
 
-            </div>
+
 
     </div>
+
+  </div>
 </div>
-<div class="dashboard"> 
-     <div class="card_size">
-    <div class="main row px-3">    
-        <div class="col-sm-1 col-md-1 col-lg-1">
+<div class="dashboard">
+  <div class="card_size">
+    <div class="main row px-3">
+      <div class="col-sm-1 col-md-1 col-lg-1">
 
-        </div>   
-        <div class="col-lg-4 col-sm-4 col-md-4 col-4 px-3 clickable">
-          <div class="info-card gradient">
-            <div class="row">
-              <div class="col-sm-10">
-                  <div class="my-1">Admin Dashboard </div>
-                  <div class="my-1"> Admin Name : <span> Milind Bhanji </span> </div>
-                  <div class="my-1"> Designation :<span> Administer </span></div>
-                  <div class="my-1"> Employee ID :<span>31288 </span></div>
-              </div>
-              <div class="col-sm-2 float-right profile">
-                  <img class="profileImage" src="http://lorempixel.com/100/100" />
-                </div>
-
+      </div>
+      <div class="col-lg-4 col-sm-4 col-md-4 col-4 px-3 clickable">
+        <div class="info-card gradient">
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="my-1">Admin Dashboard </div>
+              <div class="my-1"> Admin Name : <span> Milind Bhanji </span> </div>
+              <div class="my-1"> Designation :<span> Administer </span></div>
+              <div class="my-1"> Employee ID :<span>31288 </span></div>
             </div>
+            <div class="col-sm-2 float-right profile">
+              <img class="profileImage" src="http://lorempixel.com/100/100" />
+            </div>
+
           </div>
         </div>
-    
-        <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
-          <div class="info-card gradient">
-                  <div class="count">
+      </div>
+
+      <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
+        <div class="info-card gradient">
+          <div class="count">
             Java Devloper
             <div class="count">20 </div>
           </div>
-          </div>
         </div>
-    
-        <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
-          <div class="info-card gradient">
-                  <div class="count">
-            UI Devloper
-                  </div>
-            <div class="count">06 </div>
-          </div>
-        </div>
-    
-    
-      <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
-          <div class="info-card gradient">
-                  <div class="count">
-                                    Android Devloper
-                  </div>
-            <div class="count">05 </div>
-          </div>
-        </div>
-        <div class="col-sm-1 col-md-1 col-lg-1">
+      </div>
 
-            </div> 
-           
+      <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
+        <div class="info-card gradient">
+          <div class="count">
+            UI Devloper
+          </div>
+          <div class="count">06 </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
+        <div class="info-card gradient">
+          <div class="count">
+            Android Devloper
+          </div>
+          <div class="count">05 </div>
+        </div>
+      </div>
+      <div class="col-sm-1 col-md-1 col-lg-1">
+
+      </div>
+
     </div>
+  </div>
+
+  <div class="table_box row">
+    <div class="col-sm-1 col-md-1 col-lg-1">
+
     </div>
+    <div class="col-sm-10 col-md-10 col-lg-10 my-3">
+      <div class="card">
+        <div class="card-header">
+
+          <div class="d-flex">
+            <div class="p-2 mr-auto auto">Events List</div>
+            <div class="p-2">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search this blog">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="p-2">
+              <button class="btn btn-primary">Create Event</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+    <div class="col-sm-1 col-md-1 col-lg-1">
+
+    </div>
+
+  </div>
 </div>
 <div class="menu_bottom row">
-    <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
+  <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
 
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-10 footer">
-        @ BEAUTO System Pvt. Ltd. | <a class="link"> Terms</a>
-    </div>
-    <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
+  </div>
+  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-10 footer">
+    @ BEAUTO System Pvt. Ltd. | <a class="link"> Terms</a>
+  </div>
+  <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
 
-    </div>
+  </div>
 
 </div>
