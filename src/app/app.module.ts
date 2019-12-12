@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import {CardModule} from 'primeng/card';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class EmployeeComponent implements OnInit {
   results : string[];
   text: string;
-  constructor() { }
+  id;
+  constructor() {
+    
+   }
 
 
   search(event){
