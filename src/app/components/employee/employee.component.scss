@@ -12,7 +12,7 @@
     
     }
     .info-card {
-        padding: 12px 0px 10px 27px;
+        padding: 12px 30px 10px 27px;
         color: black;
         font-size: 10px;
         font-weight: bold;
@@ -81,4 +81,16 @@
     
     .card_size{
         padding-top: 2%;
+    }
+
+    .profile{
+        text-align: end;
+        color: white;
+        font-weight: bold;
+        margin-top: 27px;
+    }
+
+    .profileImage{
+        width: 45px;
+        border-radius: 25px;
     }
