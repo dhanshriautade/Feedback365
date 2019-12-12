@@ -1,0 +1,164 @@
+
+    .menu_bottom{      
+        bottom: 0px;      
+        position: absolute;
+        background-color: #C9C9CA;
+        width: calc(100% + 9px);
+      
+    }
+    .bgimg{
+        width: 81px;
+        padding: 10px;
+    
+    }
+    .info-card {
+        padding: 12px 30px 10px 27px;
+        color: black;
+        font-size: 10px;
+        font-weight: bold;
+        font-size: smaller;
+      }
+    
+     .footer{
+         text-align: center;
+     }
+     .dashboard{
+        height: 88vh;
+        background-color: #ECEFF1;
+     }
+     .header{
+        height: 75px;
+     }
+
+     .logo{
+        background-color: #455A64;
+        height: 75px;
+        font-size: x-large;
+        color: #90A4AE;
+        font-weight: bold;
+     }
+
+     .link{
+      color:#6C66E1
+     }
+
+     .profile{
+        text-align: end;
+     }
+
+     .search{
+        top: 0px;
+        position: absolute;
+        z-index:1;
+        input, button{
+            background: transparent;
+          
+        }
+    }
+    input{
+        border: none;
+    }
+
+    
+
+    :host ::ng-deep .ui-autocomplete-input {
+        border: 0 ;
+        border-radius: 2px;
+    }
+    :host ::ng-deep .ui-inputgroup input{
+        width: 100% !important;
+    }
+
+    .ui-button-warn{
+       background-color: white;
+       border: none;
+    }
+
+
+    .gradient{
+        background-color: white
+    }
+    
+    .card_size{
+        padding-top: 2%;
+    }
+
+    .profile{
+        text-align: end;
+        color: white;
+        font-weight: bold;
+        margin-top: 27px;
+    }
+
+    .profileImage{
+        width: 45px;
+        border-radius: 25px;
+    }
+
+    .fream{
+        background-color: white;
+    }
+
+    .auto{
+        font-weight: 700;
+    color: #0000FF;
+    }
+
+    .head{
+        background-color: #90A4AE;
+        color: white;
+    }
+
+    th ,td {
+        border-right: 1px solid white;
+        color: white;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd){
+   background-color: #F4F4F5
+    }
+
+    .table-striped tbody tr:nth-of-type(even){
+        background-color: #F5FBFF
+         }
+
+         .blue{
+             color: #2C75FF
+         }
+
+         .red{
+             color: #D2345C;
+         }
+
+         .name{
+             color:#455A64 ;
+         }
+
+         tbody tr:hover{
+              background-color: #D5EAF8 !important; 
+         }
+
+          .btn-secondary{
+            background-color: #CFD8DC;
+            border: #CFD8DC;
+         }
+
+        span{
+            color: #263238bf;
+        }
+        .admin{
+            color: #808080b0;
+            font-size: 14px;
+        }
+         .head{
+             height: 10px!important;
+         }
+
+         table td, .table th {
+            padding: 7px 5px 7px 13px;
+            // vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        
+         
