@@ -3,7 +3,7 @@
         bottom: 0px;      
         position: absolute;
         background-color: #C9C9CA;
-        width: calc(100% + 9px);
+        width: calc(100% + 11px) !important; 
       
     }
     .bgimg{
@@ -18,12 +18,15 @@
         font-weight: bold;
         font-size: smaller;
       }
-    
+      .edit{
+          text-align: end;
+      }
+
      .footer{
          text-align: center;
      }
      .dashboard{
-        height: 88vh;
+        height: 89vh;
         background-color: #ECEFF1;
      }
      .header{
@@ -161,4 +164,52 @@
         }
 
         
+        span.red {
+            width: 49px;
+    height: 49px;
+    border-radius: 25px;
+    margin: auto;
+    padding-top: 12px;
+    background: red;
+          }
          
+ .count{
+        padding: 12px 0px 0px 12px;
+        color: white;
+        font-weight: 900;
+        font-size: x-large;
+     }
+
+
+          .num{
+            background-color: blue;
+            margin-top: 18px;
+            border-radius: 73px;
+            width: 59px;
+            height: 60px;
+          }
+          .num1{
+            background-color: green;
+            margin-top: 18px;
+            border-radius: 73px;
+            width: 59px;
+            height: 60px;
+          }
+          .num2{
+            background-color: red;
+            margin-top: 18px;
+            border-radius: 73px;
+            width: 59px;
+            height: 60px;
+          }
+
+          .event{
+            color: #808080b0;
+            font-size: 16px;
+          }
+
+          .eventt{
+            color: #808080b0;
+            font-size: 14px;
+            padding-bottom: 9px;
+          }
