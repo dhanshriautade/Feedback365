@@ -109,6 +109,31 @@
         color: white;
     }
 
-    th{
-        border-right: 1px solid;
+    th ,td {
+        border-right: 1px solid white;
+        color: white;
     }
+
+    .table-striped tbody tr:nth-of-type(odd){
+   background-color: #F4F4F5
+    }
+
+    .table-striped tbody tr:nth-of-type(even){
+        background-color: #F5FBFF
+         }
+
+         .blue{
+             color: #2C75FF
+         }
+
+         .red{
+             color: #D2345C;
+         }
+
+         .name{
+             color:#455A64 ;
+         }
+
+         tbody tr:hover{
+              background-color: #D5EAF8 !important; 
+         }
