@@ -1,16 +1,91 @@
+<div class="header">
+    <div class="row">
+        <div class="col-sm-2 col-md-3 col-lg-3 col-xl-2 col-3 logo">
+                <img src="/assets/logo/360Logo.png" class="bgimg">
+                Feedback
+        </div>
+        <div class="col-sm-10 col-md-9 col-lg-9 col-xl-10 col-9 profile">
+                          <div class="ui-inputgroup row">
+                              <div class="col-sm-3">
+                                <p-autoComplete [(ngModel)]="text"   placeholder="Seach Employee or Help" [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete>
+                            <button type="submit" pButton type="button" (click)="onComplete($event)" class="ui-button-warn">
+                              <i class="pi pi-search"  style="font-size: 1em"></i>
+                            </button>
+                            </div>
+                          </div>
+                     
+                  
 
+            </div>
 
-<div class="header"> jhhsjdhsjhd </div>
-<div class="dashboard"> jhfdjfhjdf </div>
-<div class="menu_bottom row"> 
+    </div>
+</div>
+<div class="dashboard"> 
+     <div class="card_size">
+    <div class="main row px-3">    
+        <div class="col-sm-1 col-md-1 col-lg-1">
+
+        </div>   
+        <div class="col-lg-4 col-sm-4 col-md-4 col-4 px-3 clickable">
+          <div class="info-card gradient">
+            <div class="row">
+              <div class="col-sm-10">
+                  <div class="my-1">Admin Dashboard </div>
+                  <div class="my-1"> Admin Name : <span> Milind Bhanji </span> </div>
+                  <div class="my-1"> Designation :<span> Administer </span></div>
+                  <div class="my-1"> Employee ID :<span>31288 </span></div>
+              </div>
+              <div class="col-sm-2">
+
+                </div>
+
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
+          <div class="info-card gradient">
+                  <div class="count">
+            Java Devloper
+            <div class="count">20 </div>
+          </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
+          <div class="info-card gradient">
+                  <div class="count">
+            UI Devloper
+                  </div>
+            <div class="count">06 </div>
+          </div>
+        </div>
+    
+    
+      <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
+          <div class="info-card gradient">
+                  <div class="count">
+                                    Android Devloper
+                  </div>
+            <div class="count">05 </div>
+          </div>
+        </div>
+        <div class="col-sm-1 col-md-1 col-lg-1">
+
+            </div> 
+           
+    </div>
+    </div>
+</div>
+<div class="menu_bottom row">
     <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
 
     </div>
     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-10 footer">
-            @ BEAUTO System Pvt. Ltd. | <a> Terms</a> 
+        @ BEAUTO System Pvt. Ltd. | <a class="link"> Terms</a>
     </div>
     <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
 
     </div>
-        
+
 </div>

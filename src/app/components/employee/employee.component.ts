@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee.component.scss']
 })
 export class EmployeeComponent implements OnInit {
-
+  results : string[];
+  text: string;
   constructor() { }
+
+
+  search(event){
+    this.results = ['aashish', 'ajay', 'Rama', 'Pidi'];
+  }
 
   ngOnInit() {
   }
