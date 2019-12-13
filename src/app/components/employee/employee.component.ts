@@ -5,18 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.scss']
 })
-export class EmployeeComponent implements OnInit {
-  results : string[];
-  text: string;
-  id;
-  constructor() {
-    
-   }
+export class AdminComponent implements OnInit {
 
-
-  search(event){
-    this.results = ['aashish', 'ajay', 'Rama', 'Pidi'];
-  }
+  constructor() { }
 
   ngOnInit() {
   }

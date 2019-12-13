@@ -1,167 +1,267 @@
 <div class="header">
 
 
-        <div class="row">
-          <div class="col-sm-2 col-md-3 col-lg-3 col-xl-2 col-3 logo">
-            <img src="/assets/logo/360Logo.png" class="bgimg">
-            Feedback
+  <div class="row">
+    <div class="col-sm-2 col-md-3 col-lg-3 col-xl-2 col-3 logo">
+      <img src="/assets/logo/360Logo.png" class="bgimg">
+      Feedback
+    </div>
+    <div class="col-sm-10 col-md-9 col-lg-9 col-xl-10 col-9 profile" style="margin-top: 15px;">
+      <div class="d-flex d-flex-row">
+        <div class="mr-auto"></div>
+        <div>
+          <div class="mt-1">
+            <p-autoComplete [(ngModel)]="text" placeholder="Seach Employee or Help" [suggestions]="results"
+              (completeMethod)="search($event)"></p-autoComplete>
+            <button type="submit" pButton type="button" (click)="onComplete($event)" class="ui-button-warn">
+              <i class="pi pi-search" style="font-size: 1em"></i>
+            </button>
+
+
+
+
           </div>
-          <div class="col-sm-10 col-md-9 col-lg-9 col-xl-10 col-9 profile" style="margin-top: 15px;">
-            <div class="d-flex d-flex-row">
-              <div class="mr-auto"></div>
-              <div>
-                <div class="mt-1">
-                  <p-autoComplete [(ngModel)]="text" placeholder="Seach Employee or Help" [suggestions]="results"
-                    (completeMethod)="search($event)"></p-autoComplete>
-                  <button type="submit" pButton type="button" (click)="onComplete($event)" class="ui-button-warn">
-                    <i class="pi pi-search" style="font-size: 1em"></i>
+        </div>
+        <div class="ml-2 mr-2 mt-2"><i class="fa fa-cog" aria-hidden="true" style="color: black;"></i></div>
+        <div class="ml-2 mr-2 mt-2"><i class="fa fa-bell" aria-hidden="true" style="color: black;"></i></div>
+        <div class="ml-2 mr-2 mt-2"><i class="fa fa-power-off" aria-hidden="true" style="color: black;"></i></div>
+        <div class="ml-2 mr-2 mt-2"><i class="fa fa-angle-down" aria-hidden="true" style="color:black"></i></div>
+        <div class="profile" style="margin-top: 0px;">
+          <img class="profileImage" src="http://lorempixel.com/100/100" />
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+</div>
+<div class="dashboard">
+  <div class="card_size">
+    <div class="main row px-3">
+      <div class="col-sm-1 col-md-1 col-lg-1">
+
+      </div>
+      <div class="col-lg-4 col-sm-4 col-md-4 col-4 px-3 clickable">
+        <div class="info-card gradient">
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="my-1">Admin Dashboard </div>
+              <div class="my-1 admin"> Admin Name : <span class="ml-1"> Milind Bhanji </span> </div>
+              <div class="my-1 admin"> Designation :<span class="ml-1"> Administer </span></div>
+              <div class="my-1 admin"> Employee ID :<span class="ml-1">31288 </span></div>
+            </div>
+            <div class="col-sm-2 float-right profile">
+              <img class="profileImage" src="http://lorempixel.com/100/100" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
+        <div class="info-card gradient">
+          <div class="row">
+            <div class="col-sm-9">
+              <div class="my-1"> Total Events</div>
+              <div class="mt-3 event"> 125 Employee</div>
+            </div>
+
+            <div class="col-sm-3 Events">
+              <div class="num">
+                <div class="count"> 109 </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
+        <div class="info-card gradient">
+          <div class="row">
+            <div class="col-sm-9 col-lg-9 col-md-9">
+              <div class="my-1"> Completed Feedback</div>
+              <div class="mt-3 event"> 125 Employee</div>
+            </div>
+
+            <div class="col-sm-3 col-lg-3 col-md-3 Events">
+              <div class="num1">
+                <div class="count"> 109 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
+        <div class="info-card gradient">
+          <div class="row">
+            <div class="col-sm-9 col-lg-9 col-md-9">
+              <div class="my-1"> Pending Feedback</div>
+              <div class="mt-3 event"> 125 Employee</div>
+            </div>
+
+            <div class="col-sm-3 col-lg-3 col-md-3 Events">
+              <div class="num2">
+                <div class="count"> 109 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1 col-md-1 col-lg-1">
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="table_box row">
+    <div class="col-sm-1 col-md-1 col-lg-1">
+
+    </div>
+    <div class="col-sm-10 col-md-10 col-lg-10 my-3">
+      <div class="card" style="height: 125%;">
+        <div class="card-header">
+
+          <div class="d-flex">
+            <div class="p-2 mr-auto auto"><img src="../../../assets/logo/clipboard-list.png" alt=""> Events List</div>
+            <div class="p-2">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search this blog">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-search"></i>
                   </button>
-      
-      
-      
-      
                 </div>
               </div>
-              <div class="ml-2 mr-2 mt-2"><i class="fa fa-cog" aria-hidden="true" style="color: black;"></i></div>
-              <div class="ml-2 mr-2 mt-2"><i class="fa fa-bell" aria-hidden="true" style="color: black;"></i></div>
-              <div class="ml-2 mr-2 mt-2"><i class="fa fa-power-off" aria-hidden="true" style="color: black;"></i></div>
-              <div class="ml-2 mr-2 mt-2"><i class="fa fa-angle-down" aria-hidden="true" style="color:black"></i></div>
-              <div class="profile" style="margin-top: 0px;">
-                <img class="profileImage" src="http://lorempixel.com/100/100" />
-              </div>
-      
             </div>
-      
-      
-      
-      
+            <div class="p-2">
+              <button class="btn btn-primary">Create Event</button>
+            </div>
           </div>
-      
-      
+
         </div>
-      
-      
-      </div>
-      <div class="dashboard">
-        <div class="card_size">
-          <div class="main row px-3">
-            <div class="col-sm-1 col-md-1 col-lg-1">
-      
-            </div>
-            <div class="col-lg-4 col-sm-4 col-md-4 col-4 px-3 clickable">
-              <div class="info-card gradient">
-                <div class="row">
-                  <div class="col-sm-10">
-                    <div class="my-1">Admin Dashboard </div>
-                    <div class="my-1 admin"> Admin Name : <span class="ml-1"> Milind Bhanji </span> </div>
-                    <div class="my-1 admin"> Designation :<span class="ml-1"> Administer </span></div>
-                    <div class="my-1 admin"> Employee ID :<span class="ml-1">31288 </span></div>
-                  </div>
-                  <div class="col-sm-2 float-right profile">
-                    <img class="profileImage" src="http://lorempixel.com/100/100" />
-                  </div>
-      
-                </div>
-              </div>
-            </div>
-      
-            <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
-              <div class="info-card gradient">
-                <div class="row">
-                  <div class="col-sm-10">
-                      <div class="my-1">Total Events </div>  
-                      <div class="my-3 admin">
-                        124 Employee
-                      </div>
-                      <!-- <div>
-                        +0.05% <span> Since last month</span>
-                      </div> -->
-                  </div>
-                  <div class="col-sm-2">
-      
-                  </div>
-                </div>
-      
-              </div>
-            </div>
-      
-            <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
-              <div class="info-card gradient">
-                <div class="count">
-                  UI Devloper
-                </div>
-                <div class="count">06 </div>
-              </div>
-            </div>
-      
-      
-            <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
-              <div class="info-card gradient">
-                <div class="count">
-                  Android Devloper
-                </div>
-                <div class="count">05 </div>
-              </div>
-            </div>
-            <div class="col-sm-1 col-md-1 col-lg-1">
-      
-            </div>
-      
-          </div>
-        </div>
-      
-        <div class="table_box row">
-          <div class="col-sm-1 col-md-1 col-lg-1">
-      
-          </div>
-          <div class="col-sm-10 col-md-10 col-lg-10 my-3">
-            <div class="card" style="height: 125%;">
-              <div class="card-header">
-      
-                <div class="d-flex">
-                  <div class="p-2 mr-auto auto"><img src="../../../assets/logo/clipboard-list.png" alt=""> Events List</div>
-                  <div class="p-2">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search this blog">
-                      <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button">
-                          <i class="fa fa-search"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="p-2">
-                    <button class="btn btn-primary">Create Event</button>
-                  </div>
-                </div>
-      
-              </div>
-              <div class="card-body">
-               
-              </div>
-            </div>
-      
-      
-      
-      
-          </div>
-      
-      
-          <div class="col-sm-1 col-md-1 col-lg-1">
-      
-          </div>
-      
+        <div class="card-body">
+          <div class="edit"> <img src="../../../assets/logo/clipboard-list.png" alt=""> </div>
+          <!-- <img src="../../../assets/logo/clipboard-list.png" alt=""> -->
+          <table class="table table-striped" style="margin: auto; width: 85%;">
+            <thead>
+              <tr class="head">
+                <th scope="col">NO</th>
+                <th scope="col">Event Holder</th>
+                <th scope="col">Holder ID</th>
+                <th scope="col">Invited Employee</th>
+                <th scope="col">Received Feedback</th>
+                <th scope="col">Pending Feedback</th>
+                <th scope="col">Due Date <i class="fa fa-sort" aria-hidden="true"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="name">01</td>
+                <td class="name">Rakesh Khamkar</td>
+                <td align="right" class="blue">31204</td>
+                <td align="right" class="name">10</td>
+                <td align="right" class="name">03</td>
+                <td align="right" class="red">07</td>
+                <td class="name">28-12-2019</td>
+              </tr>
+
+              <tr>
+                <td scope="row" class="name">02</td>
+                <td class="name">B Milind</td>
+                <td align="right" class="blue">31228</td>
+                <td align="right" class="name">05</td>
+                <td align="right" class="name">05</td>
+                <td align="right" class="red">02</td>
+                <td class="name">14-12-2019</td>
+              </tr>
+
+              <tr>
+                <td scope="row" class="sr name">03</td>
+                <td class="name">Paresh Dahake</td>
+                <td align="right" class="blue">14578</td>
+                <td align="right" class="name">27</td>
+                <td align="right" class="name">21</td>
+                <td align="right" class="red">14</td>
+                <td class="name">09-12-2019</td>
+              </tr>
+
+              <tr>
+                <td scope="row" class="sr name">04</td>
+                <td class="name">Jayesh Shah</td>
+                <td align="right" class="blue">41589</td>
+                <td align="right" class="name">05</td>
+                <td align="right" class="name">05</td>
+                <td align="right" class="red">02</td>
+                <td class="name">14-12-2019</td>
+              </tr>
+
+
+              <tr>
+                <td scope="row" class="sr name">05</td>
+                <td class="name">Sasidhar Samala</td>
+                <td align="right" class="blue">30147</td>
+                <td align="right" class="name">11</td>
+                <td align="right" class="name">08</td>
+                <td align="right" class="red">03</td>
+                <td class="name">30-12-2019</td>
+              </tr>
+
+              <tr>
+                <td scope="row" class="sr name">06</td>
+                <td class="name">Varun Joshi</td>
+                <td align="right" class="blue">41580</td>
+                <td align="right" class="name">24</td>
+                <td align="right" class="name">13</td>
+                <td align="right" class="red">13</td>
+                <td class="name">24-12-2019</td>
+              </tr>
+
+              <tr>
+                <td scope="row" class="sr name">07</td>
+                <td class="name">Dhananjay Deshpande</td>
+                <td align="right" class="blue">38951</td>
+                <td align="right" class="name">16</td>
+                <td align="right" class="name">09</td>
+                <td align="right" class="red">04</td>
+                <td class="name">19-12-2019</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="menu_bottom row">
-        <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
-      
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-10 footer">
-          @ BEAUTO System Pvt. Ltd. | <a class="link"> Terms</a>
-        </div>
-        <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
-      
-        </div>
-      
-      </div>
+
+
+
+
+    </div>
+
+
+    <div class="col-sm-1 col-md-1 col-lg-1">
+
+    </div>
+
+  </div>
+</div>
+<div class="menu_bottom row">
+  <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
+
+  </div>
+  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-10 footer">
+    @ BEAUTO System Pvt. Ltd. | <a class="link"> Terms</a>
+  </div>
+  <div class="col-sm-3 col-md-3 col-lg-4 col-xl-4 col-1">
+
+  </div>
+
+</div>

@@ -5,11 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { EmployeeComponent } from './components/employee/employee.component';
 import {CardModule} from 'primeng/card';
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { AdminComponent } from './components/admin/admin.component';
-
+import { EmployeeComponent } from './components/admin/admin.component';
+import { AdminComponent } from './components/employee/employee.component';
 @NgModule({
   declarations: [
     AppComponent,
