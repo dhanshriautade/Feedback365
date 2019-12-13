@@ -102,3 +102,12 @@ button{
     font-weight: 700;
   
 }
+
+.full-width
+{
+    .row{
+        .col-lg-6{
+            // padding: 0px 50px 0px 50px;
+        }
+    }
+}
