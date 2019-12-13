@@ -7,11 +7,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import {CardModule} from 'primeng/card';
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { EmployeeComponent } from './components/admin/admin.component';
-import { AdminComponent } from './components/employee/employee.component';
 import { HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { EmpFeedbackComponent } from './components/emp-feedback/emp-feedback.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { EmployeeComponent } from './components/employee/employee.component';
 
 @NgModule({
   declarations: [
