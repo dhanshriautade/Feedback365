@@ -17,15 +17,26 @@
                         <button class="DeactiveAllUser" [ngClass]="activeAllUsers ? 'ActiveAllUser activeUserList' : ''"
                             (click)="myTeamView(1)">Employee</button>
                     </div>
+            
                     <form #myForm="ngForm" [formGroup]="loginForm" (ngSubmit)="Login()">
                         <div class=" tag row my-2">
                             <label for="name">User Name / ID</label>
                             <!-- <i class="fa fa-user icon"></i>  -->
-                            <input type="text" class="form-control" formControlName="email" placeholder="youremail@gmail.com">
+                            <input type="text" class="form-control" formControlName="email" placeholder="youremail@gmail.com"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div class="error err" *ngIf="f.email.errors.required">Email  required</div>
+                                <div class="error err" *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                            </div>
                         </div>
                         <div class="tag row my-2">
                             <label for="name">Password</label>
-                            <input type="text" class="form-control" formControlName="password" placeholder="*********">
+                            <input type="text" class="form-control" formControlName="password" placeholder="*********"
+                            [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div class="error err" *ngIf="f.password.errors.required">Password required</div>
+                                <div class="error err" *ngIf="f.password.errors.pattern">password must Special char, digit, uppercase, lowercase</div>
+                            </div>
                         </div>
                         <div class="my-2">
                             <div class="row">
