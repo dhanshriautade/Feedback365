@@ -12,6 +12,10 @@ import { HomeComponent } from './components/home/home.component';
 import { EmpFeedbackComponent } from './components/emp-feedback/emp-feedback.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {PanelModule} from 'primeng/panel';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +32,9 @@ import { EmployeeComponent } from './components/employee/employee.component';
     HttpClientModule,
     ReactiveFormsModule,
     AccordionModule,
+    BrowserAnimationsModule,
+    PanelModule,
+    OverlayPanelModule,
     CardModule,
     FormsModule,
     AutoCompleteModule

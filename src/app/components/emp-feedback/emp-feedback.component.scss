@@ -1,0 +1,55 @@
+.dashboard{
+    height: 89vh;
+    background-color: #ECEFF1;
+ }
+
+ .card_size{
+    padding-top: 2%;
+}
+
+.main{
+    background-color: white;    
+    padding: 6px;
+}
+
+.end{
+    text-align: end;
+    color: blue
+}
+.last{
+    text-align: end;
+}
+
+.form-control:disabled{
+    background-color: white !important;
+}
+
+.second_tab{
+    background-color: #567D8B;
+    color: white
+}
+
+.third_tab, .six_panel{
+    background-color: white;
+    // height: 435px;
+   
+}
+
+.fourth{
+    padding: 0px 10px 0px 10xp;
+}
+
+.panel_arg{
+    padding: 10px;
+    background-color: white;
+    height: 330px;
+     overflow-y: auto;
+    overflow-x: hidden;
+}
+p-panel{
+    padding: 5px 10px 5px 10px;
+}
+
+:host ::ng-deep  .ui-panel{
+    margin: 0px !important;
+}
