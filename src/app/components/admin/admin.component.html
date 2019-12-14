@@ -108,8 +108,11 @@
 
         </div>
         <div class="card-body">
-          <div class="edit"> <img src="../../../assets/logo/edit.png" alt=""> </div>
+          <div class="edit"> <img src="../../../assets/logo/edit.png" (click)="showDialog()" alt=""> </div>
           <!-- <img src="../../../assets/logo/clipboard-list.png" alt=""> -->
+          <p-dialog header="Title" [(visible)]="display">
+              Content
+          </p-dialog>
           <table class="table table-striped" style="margin: auto; width: 85%;">
             <thead>
               <tr class="head">
