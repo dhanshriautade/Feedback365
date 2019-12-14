@@ -21,11 +21,15 @@
 }
 
 .form-control:disabled{
-    background-color: white !important;
+ //  background-color: white ;
+    height: 29px;
+    width: 33px;
+    font-weight: bolder;
+    font-size: small;
 }
 
 .second_tab{
-    background-color: #567D8B;
+    background-color: #607D8B;
     color: white
 }
 
@@ -52,4 +56,29 @@ p-panel{
 
 :host ::ng-deep  .ui-panel{
     margin: 0px !important;
+}
+.my-2{
+    margin-bottom: -1.6rem !important;
+    
+}
+
+.qus{
+    color: #D2345C;
+    font-weight: bold;
+}
+.qus1{
+    color: #D2345C;
+    font-size: small;
+
+}
+.name{
+    color: #2C75FF;
+    font-weight: bold;
+}
+.diag{
+    color: #FCC612;
+}
+.btn{
+    width: 120px;
+   
 }
