@@ -126,76 +126,17 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td scope="row" class="name">01</td>
-                <td class="name">Rakesh Khamkar</td>
-                <td align="right" class="blue">31204</td>
-                <td align="right" class="name">10</td>
-                <td align="right" class="name">03</td>
-                <td align="right" class="red">07</td>
-                <td class="name">28-12-2019</td>
+              <tr *ngFor="let data of data index as i">
+                <td scope="row" class="name">{{i+1}}</td>
+                <td class="name">{{data.toEmpName}}</td>
+                <td align="right" class="blue">{{data.empId}}</td>
+                <td align="right" class="name">{{data.invited}}</td>
+                <td align="right" class="name">{{data.received}}</td>
+                <td align="right" class="red">{{data.pending}}</td>
+                <td class="name">{{data.dueDate}}</td>
               </tr>
 
-              <tr>
-                <td scope="row" class="name">02</td>
-                <td class="name">B Milind</td>
-                <td align="right" class="blue">31228</td>
-                <td align="right" class="name">05</td>
-                <td align="right" class="name">05</td>
-                <td align="right" class="red">02</td>
-                <td class="name">14-12-2019</td>
-              </tr>
-
-              <tr>
-                <td scope="row" class="sr name">03</td>
-                <td class="name">Paresh Dahake</td>
-                <td align="right" class="blue">14578</td>
-                <td align="right" class="name">27</td>
-                <td align="right" class="name">21</td>
-                <td align="right" class="red">14</td>
-                <td class="name">09-12-2019</td>
-              </tr>
-
-              <tr>
-                <td scope="row" class="sr name">04</td>
-                <td class="name">Jayesh Shah</td>
-                <td align="right" class="blue">41589</td>
-                <td align="right" class="name">05</td>
-                <td align="right" class="name">05</td>
-                <td align="right" class="red">02</td>
-                <td class="name">14-12-2019</td>
-              </tr>
-
-
-              <tr>
-                <td scope="row" class="sr name">05</td>
-                <td class="name">Sasidhar Samala</td>
-                <td align="right" class="blue">30147</td>
-                <td align="right" class="name">11</td>
-                <td align="right" class="name">08</td>
-                <td align="right" class="red">03</td>
-                <td class="name">30-12-2019</td>
-              </tr>
-
-              <tr>
-                <td scope="row" class="sr name">06</td>
-                <td class="name">Varun Joshi</td>
-                <td align="right" class="blue">41580</td>
-                <td align="right" class="name">24</td>
-                <td align="right" class="name">13</td>
-                <td align="right" class="red">13</td>
-                <td class="name">24-12-2019</td>
-              </tr>
-
-              <tr>
-                <td scope="row" class="sr name">07</td>
-                <td class="name">Dhananjay Deshpande</td>
-                <td align="right" class="blue">38951</td>
-                <td align="right" class="name">16</td>
-                <td align="right" class="name">09</td>
-                <td align="right" class="red">04</td>
-                <td class="name">19-12-2019</td>
-              </tr>
+              
             </tbody>
           </table>
         </div>
