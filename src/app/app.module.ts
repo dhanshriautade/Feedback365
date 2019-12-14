@@ -15,7 +15,8 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import {OverlayPanelModule} from 'primeng/overlaypanel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {PanelModule} from 'primeng/panel';
-
+import { ToastrModule } from 'ngx-toastr';
+import {DialogModule} from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -35,9 +36,15 @@ import {PanelModule} from 'primeng/panel';
     BrowserAnimationsModule,
     PanelModule,
     OverlayPanelModule,
+    DialogModule,
     CardModule,
     FormsModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    ToastrModule.forRoot({
+      closeButton: true,
+      progressBar: true,
+      preventDuplicates : true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

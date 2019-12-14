@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee.component.scss']
 })
 export class EmployeeComponent implements OnInit {
-
+  display: boolean = false;
   constructor() { }
 
   ngOnInit() {
+  }
+  showDialog(){
+    this.display = true;
   }
 
 }

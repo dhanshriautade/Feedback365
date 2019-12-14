@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/components/services/auth.service';
 import { FormControl, FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -16,10 +17,11 @@ export class LoginComponent implements OnInit {
   })
   submitted = false;
   activeAllUsers = false;
-
-  role;
+  spinner = false;
+  role = 'admin';
   data;
-  constructor(private formBuilder: FormBuilder, public AuthService: AuthService, private router: Router) { }
+  res;
+  constructor(private formBuilder: FormBuilder, public AuthService: AuthService, private toastr: ToastrService, private router: Router) { }
 
 
   myTeamView(flag) {
@@ -46,6 +48,7 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
   Login() {
     this.submitted = true;
+    this.spinner =true;
     // stop here if form is invalid
     if (this.loginForm.invalid) {
       return;
@@ -56,9 +59,19 @@ export class LoginComponent implements OnInit {
       "password": this.loginForm.value.password,
       "role": this.role
     }
+    console.log(this.data);
     this.AuthService.LogIn(this.data).subscribe(res => {
-      console.log(res);
-
+     this.res =res;
+     this.spinner =false;
     })
+    if(this.res.role == 'admin'){
+      this.router.navigateByUrl('/main/admin');
+    }
+    else if(this.res.role == 'employee'){  
+      this.router.navigateByUrl('/main/employee');
+    }
+    else{
+      this.toastr.error('Invalid credentials Oops!')
+    }
   }
 }

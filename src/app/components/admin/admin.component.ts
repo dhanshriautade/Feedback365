@@ -9,6 +9,7 @@ export class AdminComponent implements OnInit {
   results : string[];
   text: string;
   id;
+  display: boolean = false;
   constructor() {
     
    }
@@ -17,6 +18,9 @@ export class AdminComponent implements OnInit {
   search(event){
     this.results = ['aashish', 'ajay', 'Rama', 'Pidi'];
   }
+  showDialog() {
+    this.display = true;
+}
 
   ngOnInit() {
   }
