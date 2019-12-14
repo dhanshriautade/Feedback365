@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  Login:'http://localhost:9001/feedback/accountValidate',
+  Login:'http://localhost:9002/feedback/accountValidate',
+  GetEvent:'http://localhost:9002/feedback/getEventList'
 };
 
 /*
