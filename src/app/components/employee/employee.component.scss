@@ -272,21 +272,30 @@
               color: white;
               padding: 5px;
           }
+          .text_a{
+            width: 417px;
+            border: 1px solid #D3D3D3;
+            border-radius: 6px;
+          }
          
           .tble{
          
               width: 10px;
-              height: 50px;
+             height: 50px;
               border: 1px solid black; 
-              width: 424px;
-          border-radius: 2px solid;
+             width: 424px;
+        
           border-radius: 6px;
           margin-left: 10px;
-
           border: 1px solid #D3D3D3;
           }
           .comm{
             margin-left: 35px;
+          }
+          .report{
+            color: #157DEC;
+            margin-left: 10px;
+
           }
 
           .strip{

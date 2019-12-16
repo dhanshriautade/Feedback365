@@ -110,7 +110,7 @@
             <p-dialog [(visible)]="display">
                 <p-header class="dialogHeader">
                 <img src="../../../assets/logo/clipboard-list.png" alt="">
-                My Report
+               <span class="report"> My Report</span>
                 </p-header>
                 
                 <div class="box">
@@ -165,9 +165,11 @@
                 <div class=" my-1 txt1 comm ">
                 comments from employee:
                 </div>
-                <div class=" txt1 tble">
-                <input type="text" placeholder="no comments...">
-                </div>
+               <div class="col sm-12 ">
+                 
+                  <textarea class="text_a"rows="2" id="comment"></textarea>
+              
+               </div>
                 </div>
                 </div>
                 </p-dialog>
