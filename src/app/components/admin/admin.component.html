@@ -102,49 +102,51 @@
               </div>
             </div>
             <div class="p-2">
-              <button class="btn btn-primary">Create Event</button>
+              <button class="btn btn-primary" (click)="showDialog()">Create Event</button>
             </div>
           </div>
 
         </div>
         <div class="card-body">
-          <div class="edit"> <img src="../../../assets/logo/edit.png" (click)="showDialog()" alt=""> </div>
-          <!-- <img src="../../../assets/logo/clipboard-list.png" alt=""> -->
-          <p-dialog header="Employee Profile" [(visible)]="display">
-              <div class="row box">
-                  <div class="col-sm-6 my-1 txt1">
-                    Employee Name: Jayesh Shah
-                  </div>
-                  <div class="col-sm-6 my-1 txt">
-                    Invited Events: 05
-                  </div>
-                  <div class="col-sm-6 my-1 txt1">
-                    Designation: Tech Lead
-                  </div>
-                  <div class="col-sm-6 my-1 txt">
-                    Received Events:05
-                  </div>
-                  <div class="col-sm-6 my-1 txt1">
-                    Employee ID: 41589
-                  </div>
-                  <div class="col-sm-6 my-1 txt">
-                    Pending Feedbacks: 02
-                  </div>
-                  <div class="col-sm-6 my-1 txt1">
-                    Email: Jayesh.Shah@Gmail.com
-                  </div>
-                  <div class="col-sm-6 my-1">
-                     
-                    </div>
-                    <div class="col-sm-6 my-1 txt1">
-                       Cell No: +91 9850150473
-                      </div>
-                      <div class="col-sm-6 my-1" >
-                        
-                          <button class="btn btn1" type="submit" >Send Reminder </button>
-                        </div>
+            <p-dialog [(visible)]="display">
+                <p-header class="dialogHeader">
+                <img src="../../../assets/logo/profile.png" alt="">
+                Employee Profile
+                </p-header>
+                <div class="row box">
+                <div class="col-sm-6 my-1 txt1">
+                <span> Employee Name:</span> <span class="emp"> Shah</span>
                 </div>
-          </p-dialog>
+                <div class="col-sm-6 my-1 txt1">
+                <span class="emp_l"> Invited Events:</span> <span class="emp">05</span>
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                <span>Designation:</span><span class="emp">Tech Lead</span>
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                <span class="emp_l1" >Received Events:</span ><span class="emp">05</span>
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                <span> ID:</span> <span class="emp">41589</span>
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                <span class="emp_l2">Pending Feedbacks:</span> <span class="emp"> 02</span>
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                <span>Email:</span> <span class="emp">jayesh.shah@gmail.com</span>
+                </div>
+                <div class="col-sm-6 my-1">
+                
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                <span >Cell No:</span><span class="emp">+91 9850150473</span>
+                </div>
+                <div class="col-sm-6 my-1" >
+                
+                <button class="btn btn1" type="submit" >Send Reminder </button>
+                </div>
+                </div>
+                </p-dialog>
           <table class="table table-striped" style="margin: auto; width: 85%;">
             <thead>
               <tr class="head">

@@ -101,72 +101,76 @@
               </div>
             </div>
             <div class="p-2">
-              <button class="btn btn-primary">Create Event</button>
+              <button class="btn btn-primary" (click)="showDialog()">Create Event</button>
             </div>
           </div>
 
         </div>
         <div class="card-body">
-          <div class="edit"> <img src="../../../assets/logo/edit.png" (click)="showDialog()" alt=""> </div>
-          <!-- <img src="../../../assets/logo/clipboard-list.png" alt=""> -->
-          <p-dialog header="My Report" [(visible)]="display">
-            <div class="box">
-              <p>The goal of 360 feedback is for you to use the feedback for your personal development , to help you
+            <p-dialog [(visible)]="display">
+                <p-header class="dialogHeader">
+                <img src="../../../assets/logo/clipboard-list.png" alt="">
+                My Report
+                </p-header>
+                
+                <div class="box">
+                <p>The goal of 360 feedback is for you to use the feedback for your personal development , to help you 
                 and grow and achieve more in your career.
-              </p><br>
-              <p>You were given feedback on 15 different areas. We recommend that you focus on your top strengths
+                </p><br>
+                <p>You were given feedback on 15 different areas. We recommend that you focus on your top strengths
                 and areas to improve,listed below.
-              </p>
-              <div class="tbl">
-                <div class="row  ">
-                  <div class="col-sm-6 my-1 txt1 btn1">
-                    Your top 5 strengths
-                  </div>
-                  <div class="col-sm-6 my-1 txt btn2">
-                    Your top areas to improve
-                  </div>
-                  <div class="col-sm-6 my-1 txt1">
-                    1.Motivating and inspiring
-                  </div>
-                  <div class="col-sm-6 my-1 txt">
-                    1.Seeking Feedback
-                  </div>
-                  <div class="col-sm-6 my-1 txt1">
-                    2.Identifying development needs
-                  </div>
-                  <div class="col-sm-6 my-1 txt">
-                    2.Demonstrating self development
-                  </div>
-                  <div class="col-sm-6 my-1 txt1">
-                    3.Delegating
-                  </div>
-                  <div class="col-sm-6 my-1 txt">
-                    3.Improving performance
-                  </div>
-                  <div class="col-sm-6 my-1 txt1">
-                    4.Communicating clearly
-                  </div>
-                  <div class="col-sm-6 my-1 txt">
-                    4.Handling disagreement
-                  </div>
-                  <div class="col-sm-6 my-1 txt1">
-                    5.Giving feedback
-                  </div>
-                  <div class="col-sm-6 my-1 txt">
-                    5.Developing strategy
-                  </div>
+                </p>
+                <div class="tbl">
+                <div class="row ">
+                <div class="col-sm-6 my-1 txt1 btn1">
+                Your top 5 strengths
                 </div>
-              </div>
-              <div class="row">
-                <div class=" my-1 txt1 ">
-                  comments from employee:
+                <div class="col-sm-6 my-1 txt btn2">
+                Your top areas to improve
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                1.Motivating and inspiring
+                </div>
+                <div class="col-sm-6 my-1 txt">
+                1.Seeking Feedback
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                2.Identifying development needs
+                </div>
+                <div class="col-sm-6 my-1 txt">
+                2.Demonstrating self development
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                3.Delegating
+                </div>
+                <div class="col-sm-6 my-1 txt">
+                3.Improving performance
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                4.Communicating clearly
+                </div>
+                <div class="col-sm-6 my-1 txt">
+                4.Handling disagreement
+                </div>
+                <div class="col-sm-6 my-1 txt1">
+                5.Giving feedback
+                </div>
+                <div class="col-sm-6 my-1 txt">
+                5.Developing strategy
+                </div>
+                </div> 
+                </div>
+                
+                <div class="row ">
+                <div class=" my-1 txt1 comm ">
+                comments from employee:
                 </div>
                 <div class=" txt1 tble">
-                  no comments...
+                <input type="text" placeholder="no comments...">
                 </div>
-              </div>
-            </div>
-          </p-dialog>
+                </div>
+                </div>
+                </p-dialog>
           <div class="row strip my-2">
 
               <div class="col-sm-6 col-lg-6">

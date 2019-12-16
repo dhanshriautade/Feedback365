@@ -228,6 +228,7 @@
             border: 1px solid gray;
             margin: 20px;
             height: 216px;
+            border: 1px solid #D3D3D3;
           }
           .a{
             display: inline; /* the default for span */
@@ -250,21 +251,42 @@
               left: 15px;
               height: 34px;
               margin-top: 0rem!important;
-          }
+              font-weight: bold;
+              font-size: 16px;
+            color: white;
+            padding: 5px;
+                  }
+                  .dialogHeader{
+                    color: #157DEC;
+                    font-weight: 700;
+                }
+
           .btn2{
             background-color: #DF0058;
             right: 2%;
               height: 34px;
               margin-top: 0rem!important;
+              font-size: 16px;
+              right: 15px;
+              font-weight: bold;
+              color: white;
+              padding: 5px;
           }
+         
           .tble{
-            width: 10px;
-            height: 50px;
-            border: 1px solid black; 
-            width: 469px;
-    border-radius: 2px solid;
-    border-radius: 6px;
-    border-color: #dbdbdb;
+         
+              width: 10px;
+              height: 50px;
+              border: 1px solid black; 
+              width: 424px;
+          border-radius: 2px solid;
+          border-radius: 6px;
+          margin-left: 10px;
+
+          border: 1px solid #D3D3D3;
+          }
+          .comm{
+            margin-left: 35px;
           }
 
           .strip{
