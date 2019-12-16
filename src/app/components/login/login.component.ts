@@ -60,10 +60,14 @@ export class LoginComponent implements OnInit {
       "role": this.role
     }
     console.log(this.data);
-    this.AuthService.LogIn(this.data).subscribe(res => {
-     this.res =res;
+    this.AuthService.LogIn(this.data).subscribe(res => {  
+     this.res =res;    
+     console.log('list',this.res);
+     localStorage.setItem('name', this.res.name);
+     localStorage.setItem('Designation',this.res.designation);
+     localStorage.setItem('id',this.res.empId);
      this.spinner =false;
-    })
+ 
     if(this.res.role == 'admin'){
       this.router.navigateByUrl('/main/admin');
     }
@@ -73,5 +77,6 @@ export class LoginComponent implements OnInit {
     else{
       this.toastr.error('Invalid credentials Oops!')
     }
+  })
   }
 }

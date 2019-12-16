@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {PanelModule} from 'primeng/panel';
 import { ToastrModule } from 'ngx-toastr';
 import {DialogModule} from 'primeng/dialog';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {DialogModule} from 'primeng/dialog';
     AccordionModule,
     BrowserAnimationsModule,
     PanelModule,
+    NgxPaginationModule,
     OverlayPanelModule,
     DialogModule,
     CardModule,

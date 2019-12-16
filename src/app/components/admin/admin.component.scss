@@ -231,3 +231,31 @@
           .btn1{
              background-color: #ECEFF1;
           }
+
+          :host ::ng-deep .ngx-pagination {
+            text-align: -webkit-right !important;
+            margin-top: 10px;
+          }
+
+          .dialogHeader{
+            color: #157DEC;
+            font-weight: 700;
+        }
+        .btn1{
+            background-color: #ECEFF1;
+            margin-left: 106px;
+            padding-right: 29px;
+            }
+            .emp{
+            font-weight: bold;
+            margin-left: 4px;
+            }
+            .emp_l{
+            margin-left: 148px;
+            }
+            .emp_l1{
+            margin-left: 133px;
+            }
+            .emp_l2{
+            margin-left: 111px;
+            }
