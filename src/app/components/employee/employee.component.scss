@@ -218,3 +218,52 @@
             font-size: 14px;
             padding-bottom: 9px;
           }
+          .box{
+            width: 650px;
+            height: 446px;
+          }
+          .tbl{
+            background-color: #F4F4F5;
+            width: 700;
+            border: 1px solid gray;
+            margin: 20px;
+            height: 216px;
+          }
+          .a{
+            display: inline; /* the default for span */
+            //width: 100px;
+           // height: 100px;
+          //  padding: 5px;
+            border: 1px solid white;  
+            background-color: #00E35B; 
+          }
+          .b{
+            display: inline; /* the default for span */
+           // width: 100px;
+           // height: 100px;
+           // padding: 5px;
+            border: 1px solid white;  
+            background-color: #DF0058; 
+          }
+          .btn1{
+              background-color: #00E35B;
+              left: 15px;
+              height: 34px;
+              margin-top: 0rem!important;
+          }
+          .btn2{
+            background-color: #DF0058;
+            right: 2%;
+              height: 34px;
+              margin-top: 0rem!important;
+          }
+          .tble{
+            width: 10px;
+            height: 50px;
+            border: 1px solid black; 
+            width: 469px;
+    border-radius: 2px solid;
+    border-radius: 6px;
+    border-color: #dbdbdb;
+          }
+          
