@@ -89,7 +89,9 @@
       <div class="card" style="height: 125%;">
         <div class="card-header" *ngIf="EventList">
           <div class="d-flex">
-            <div class="p-2 mr-auto auto"><img src="../../../assets/logo/clipboard-list.png" alt=""> Events List</div>
+              <div class="p-2 mr-auto auto "><img src="../../../assets/logo/clipboard-list.png" alt="">
+                <span class="evnt">Events List</span>
+               </div>
             <div class="p-2">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search events">
@@ -109,7 +111,7 @@
         <div class="card-header" *ngIf="CreateEvent">
 
             <div class="d-flex">
-              <div class="p-2 mr-auto auto"><img src="../../../assets/logo/clipboard-list.png" alt=""> Create Events </div>
+              <div class="p-2 mr-auto auto"><img src="../../../assets/logo/create event icon.png" alt=""> Create Events </div>
               <div class="p-2">
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Search events">
@@ -121,7 +123,7 @@
                 </div>
               </div>
               <div class="p-2">
-                <button class="btn btn-primary" (click)="CloseEvent()">Event List</button>
+                  <button class="btn btn-primary add_b" (click)="CloseEvent()">Event List</button>
               </div>
             </div>
   
@@ -246,8 +248,8 @@
             <div class="col-sm-2"></div>
             
               <div class="col-sm-10 underline"> 
-                <button class="btn btn-primary mr-1" (click)="Reset()">Reset</button>
-                <button class="btn btn-primary ml-1" (click)="Add()">Add</button>
+                  <button class="btn btn-primary mr-1 add_r" (click)="Reset()">Reset</button>
+                  <button class="btn btn-primary ml-1 add_b" (click)="Add()">Add</button>
               </div>
               <div class="col-sm-2">
 
@@ -261,13 +263,38 @@
               </div>
               <div class="row">
                 <div class="col-sm-6">
-                  <div>Event To : Sachin Surdikar</div>
-                  <div>Feedback From : Sachin Surdikar, Ram Jogawalkar</div>
-                  <div> Due Date: 31:12:2019 </div>
+                  <div class=row>
+                    <div class="col-sm-3 text-right">
+                        Event To :
+                    </div>
+                    <div class="row ">
+                        Sachin Surdikar
+                      </div>
+                  </div>
+                  <div class=row>
+                      <div class="col-sm-3 text-right">
+                          Feedback From:
+                      </div>
+                      <div class="row ">
+                          Anish oberoi,Mrudula Deshpande,Ram Jogwalkar
+                        </div>
+                    </div>
+                    <div class=row>
+                        <div class="col-sm-3 text-right">
+                            Due Date:
+                        </div>
+                        <div class="row ">
+                          <div class="cal">
+                            <input type="date" name="bday">
+                          </div>
+                          </div>
+                      </div>
 
                 </div>
                 <div class="col-sm-6">
-
+                    <!-- <div class="col-sm3">Event To : Sachin Surdikar</div>
+                  <div>Feedback From : Sachin Surdikar, Ram Jogawalkar</div>
+                  <div> Due Date: 31:12:2019 </div> -->
                   </div>
 
               </div>
@@ -279,7 +306,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-10 underline"> 
-                        <button class="btn btn-primary mr-1" (click)="Reset()">Cancel</button>
+                        <button class="btn btn-primary mr-1 add_r" (click)="Reset()">Cancel</button>
                         <button class="btn btn-primary ml-1" (click)="Add()">Create  Event</button>
                       </div>
                       <div class="sol-sm-2"></div>
