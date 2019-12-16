@@ -16,6 +16,8 @@ export class AdminComponent implements OnInit {
   empid;
   config: any;
   display: boolean = false;
+  CreateEvent = false;
+  EventList = true;
   constructor(public AuthService: AuthService,) {
     this.name = localStorage.getItem('name');
     this.designation= localStorage.getItem('Designation');
@@ -34,6 +36,16 @@ export class AdminComponent implements OnInit {
    }
    pageChanged(event){
     this.config.currentPage = event;
+  }
+
+  OpenEvent(){
+    this.CreateEvent= true;
+    this.EventList = false;
+  }
+
+  CloseEvent(){
+    this.CreateEvent= false;
+    this.EventList = true;
   }
 
   search(event){

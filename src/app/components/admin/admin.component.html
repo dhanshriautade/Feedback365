@@ -87,8 +87,7 @@
     </div>
     <div class="col-sm-10 col-md-10 col-lg-10 my-3">
       <div class="card" style="height: 125%;">
-        <div class="card-header">
-
+        <div class="card-header" *ngIf="EventList">
           <div class="d-flex">
             <div class="p-2 mr-auto auto"><img src="../../../assets/logo/clipboard-list.png" alt=""> Events List</div>
             <div class="p-2">
@@ -102,12 +101,32 @@
               </div>
             </div>
             <div class="p-2">
-              <button class="btn btn-primary" (click)="showDialog()">Create Event</button>
+              <button class="btn btn-primary" (click)="OpenEvent()" >Create Event</button>
             </div>
           </div>
 
         </div>
-        <div class="card-body">
+        <div class="card-header" *ngIf="CreateEvent">
+
+            <div class="d-flex">
+              <div class="p-2 mr-auto auto"><img src="../../../assets/logo/clipboard-list.png" alt=""> Create Events </div>
+              <div class="p-2">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search events">
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2">
+                <button class="btn btn-primary" (click)="CloseEvent()">Event List</button>
+              </div>
+            </div>
+  
+          </div>
+        <div class="card-body" *ngIf="EventList">
             <p-dialog [(visible)]="display">
                 <p-header class="dialogHeader">
                 <img src="../../../assets/logo/profile.png" alt="">
@@ -160,7 +179,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let data of data | paginate: config ; let i = index">
+              <tr *ngFor="let data of data | paginate: config ; let i = index" (click)="showDialog()">
                 <td scope="row" class="name">{{i+1}}</td>
                 <td class="name">{{data.toEmpName}}</td>
                 <td align="right" class="blue">{{data.toEmpId}}</td>
@@ -175,6 +194,102 @@
           </table>  
           <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
         </div>
+
+        <div class="card-body" *ngIf="CreateEvent">
+          <div class="row">
+            <div class="col-sm-5">
+                <div class="my-2">
+                    Select  employee from below list for to.
+                 </div>
+                <table class="table table-striped">
+                    <thead>
+                      <tr class="head">
+                        <th scope="col">Select</th>
+                        <th scope="col">Employee Name</th>
+                        <th scope="col">Employee ID</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of data" >
+                        <td class="name" align="center" > <input type="radio" class="form-check-input" name="optradio"> </td>
+                        <td align="right" class="blue">{{data.toEmpName}}</td>
+                        <td align="right" class="name">{{data.invited}}</td>
+                      </tr>
+        
+                      
+                    </tbody>
+                  </table>  
+            </div>
+            <div class="col-sm-5"> 
+              <div class="my-2">
+                 Select and add multiple employee for send feedback.
+              </div>
+              <table class="table table-striped">
+                <thead>
+                  <tr class="head">
+                    <th scope="col">Select</th>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Employee ID</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of data" >
+                    <td class="name" align="center">  <input type="checkbox" class="form-check-input" id="materialChecked2" checked>
+                     </td>
+                    <td align="right" class="blue">{{data.toEmpName}}</td>
+                    <td align="right" class="name">{{data.invited}}</td>
+                  </tr>
+    
+                  
+                </tbody>
+              </table>  </div>
+            <div class="col-sm-2"></div>
+            
+              <div class="col-sm-10 underline"> 
+                <button class="btn btn-primary mr-1" (click)="Reset()">Reset</button>
+                <button class="btn btn-primary ml-1" (click)="Add()">Add</button>
+              </div>
+              <div class="col-sm-2">
+
+              </div>
+            </div>
+              <div class="row my-2">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 line"></div>
+                <div class="col-sm-1"></div>
+
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div>Event To : Sachin Surdikar</div>
+                  <div>Feedback From : Sachin Surdikar, Ram Jogawalkar</div>
+                  <div> Due Date: 31:12:2019 </div>
+
+                </div>
+                <div class="col-sm-6">
+
+                  </div>
+
+              </div>
+              <div class="row my-2">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-10 line"></div>
+                  <div class="col-sm-1"></div>
+  
+                </div>
+                <div class="row">
+                    <div class="col-sm-10 underline"> 
+                        <button class="btn btn-primary mr-1" (click)="Reset()">Cancel</button>
+                        <button class="btn btn-primary ml-1" (click)="Add()">Create  Event</button>
+                      </div>
+                      <div class="sol-sm-2"></div>
+
+                </div>
+           
+
+         
+          
+         </div>
       </div>
 
 
