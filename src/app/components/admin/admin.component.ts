@@ -11,15 +11,30 @@ export class AdminComponent implements OnInit {
   text: string;
   id;
   data;
+  name;
+  designation;
+  empid;
+  config: any;
   display: boolean = false;
   constructor(public AuthService: AuthService,) {
-    this.AuthService.GetEvent().subscribe(res => {
+    this.name = localStorage.getItem('name');
+    this.designation= localStorage.getItem('Designation');
+    this.empid = localStorage.getItem('id');
+      this.AuthService.GetEvent().subscribe(res => {
       this.data = res
       console.log(this.data);
+      this.config = {
+        itemsPerPage: 5,
+        currentPage: 1,
+        totalItems: this.data.count
+      };
      })
-    
-   }
 
+   
+   }
+   pageChanged(event){
+    this.config.currentPage = event;
+  }
 
   search(event){
     this.results = ['aashish', 'ajay', 'Rama', 'Pidi'];
@@ -27,6 +42,7 @@ export class AdminComponent implements OnInit {
   showDialog() {
     this.display = true;
 }
+
 
   ngOnInit() {
   }
