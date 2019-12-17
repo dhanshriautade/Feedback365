@@ -37,6 +37,10 @@ export class AdminComponent implements OnInit {
       // console.log('lsist', this.totalvalue);
     })
   
+    this.AuthService.GetAllEmployee().subscribe(res => {
+      this.dataInfo = res;
+      // console.log('lsist', this.totalvalue);
+    })
 
    
    }
@@ -56,8 +60,7 @@ export class AdminComponent implements OnInit {
 
     this.AuthService.GetEvent().subscribe(res => {
       this.data =res;
-      this.dataInfo = res;
-     this.config = {
+       this.config = {
        itemsPerPage: 5,
        currentPage: 1,
        totalItems: this.data.count
@@ -101,9 +104,6 @@ export class AdminComponent implements OnInit {
     this.EventList = true;
   }
 
-  search(event){
-    this.results = ['aashish', 'ajay', 'Rama', 'Pidi'];
-  }
   showDialog(id) {
      this.data = {
       "empId":  id
@@ -119,7 +119,6 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
     this.AuthService.GetEvent().subscribe(res => {
       this.data =res;
-      this.dataInfo = res;
      this.config = {
        itemsPerPage: 5,
        currentPage: 1,
