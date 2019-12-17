@@ -296,3 +296,9 @@
                     
                     
                     }
+
+                    :host ::ng-deep  .ui-button-icon-only{
+                        background-color: gray;
+                        border-color: gray;
+
+                    }

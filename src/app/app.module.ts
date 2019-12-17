@@ -18,6 +18,7 @@ import {PanelModule} from 'primeng/panel';
 import { ToastrModule } from 'ngx-toastr';
 import {DialogModule} from 'primeng/dialog';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {CalendarModule} from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    CalendarModule,
     AccordionModule,
     BrowserAnimationsModule,
     PanelModule,

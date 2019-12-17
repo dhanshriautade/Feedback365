@@ -5,7 +5,10 @@
 export const environment = {
   production: false,
   Login:'http://localhost:9001/feedback/accountValidate',
-  GetEvent:'http://localhost:9001/feedback/getEventList'
+  GetEvent:'http://localhost:9001/feedback/getEventList',
+  GetTotalEvent:'http://localhost:9001/feedback/getTotalSummary',
+  ProfileInfo:'http://localhost:9001/feedback/getUserDetails',
+  GetAllEmployee:'',
 };
 
 /*

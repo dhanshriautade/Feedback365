@@ -11,8 +11,8 @@
             <div class="col-sm-10">
               <div class="my-1">Admin Dashboard </div>
               <div class="my-1 admin"> Admin Name : <span class="ml-1"> {{name}} </span> </div>
-              <div class="my-1 admin"> Designation :<span class="ml-1"> Administer </span></div>
-              <div class="my-1 admin"> Employee ID :<span class="ml-1">31288 </span></div>
+              <div class="my-1 admin"> Designation :<span class="ml-1"> {{designation}} </span></div>
+              <div class="my-1 admin"> Employee ID :<span class="ml-1">{{empid}} </span></div>
             </div>
             <div class="col-sm-2 float-right profile">
               <img class="profileImage" src="http://lorempixel.com/100/100" />
@@ -27,12 +27,12 @@
           <div class="row">
             <div class="col-sm-9">
               <div class="my-1"> Total Events</div>
-              <div class="mt-3 event"> 125 Employee</div>
+              <div class="mt-3 event"> {{totalvalue.totalEmployees}} Employees</div>
             </div>
 
             <div class="col-sm-3 Events">
               <div class="num">
-                <div class="count"> 109 </div>
+                <div class="count">{{totalvalue.totalEvents}}</div>
               </div>
             </div>
           </div>
@@ -45,12 +45,12 @@
           <div class="row">
             <div class="col-sm-9 col-lg-9 col-md-9">
               <div class="my-1"> Completed Feedback</div>
-              <div class="mt-3 event"> 125 Employee</div>
+              <div class="mt-3 event"> {{totalvalue.totalEmployees}} Employees </div>
             </div>
 
             <div class="col-sm-3 col-lg-3 col-md-3 Events">
               <div class="num1">
-                <div class="count"> 109 </div>
+                <div class="count"> {{totalvalue.totalReceived}} </div>
               </div>
             </div>
           </div>
@@ -63,12 +63,12 @@
           <div class="row">
             <div class="col-sm-9 col-lg-9 col-md-9">
               <div class="my-1"> Pending Feedback</div>
-              <div class="mt-3 event"> 125 Employee</div>
+              <div class="mt-3 event"> {{totalvalue.totalEmployees}} Employees </div>
             </div>
 
             <div class="col-sm-3 col-lg-3 col-md-3 Events">
               <div class="num2">
-                <div class="count"> 109 </div>
+                <div class="count"> {{totalvalue.totalPending}}</div>
               </div>
             </div>
           </div>
@@ -128,46 +128,47 @@
             </div>
   
           </div>
+          <p-dialog [(visible)]="display">
+            <p-header class="dialogHeader">
+            <img src="../../../assets/logo/profile.png" alt="">
+            Employee Profile
+            </p-header>
+            <div class="row box">
+            <div class="col-sm-6 my-1 txt1">
+            <span> Employee Name:</span> <span class="emp"> {{info.empName}}</span>
+            </div>
+            <div class="col-sm-6 my-1 txt1">
+            <span class="emp_l"> Invited Events:</span> <span class="emp">{{info.invitedEvents}}</span>
+            </div>
+            <div class="col-sm-6 my-1 txt1">
+            <span>Designation:</span><span class="emp">{{info.designation}}</span>
+            </div>
+            <div class="col-sm-6 my-1 txt1">
+            <span class="emp_l1" >Received Events:</span ><span class="emp">{{info.receivedEvents}}</span>
+            </div>
+            <div class="col-sm-6 my-1 txt1">
+            <span> ID:</span> <span class="emp">{{info.empId}}</span>
+            </div>
+            <div class="col-sm-6 my-1 txt1">
+            <span class="emp_l2">Pending Feedbacks:</span> <span class="emp">{{info.pendingEvents}} </span>
+            </div>
+            <div class="col-sm-6 my-1 txt1">
+            <span>Email:</span> <span class="emp">{{info.email}}</span>
+            </div>
+            <div class="col-sm-6 my-1">
+            
+            </div>
+            <div class="col-sm-6 my-1 txt1">
+            <span >Cell No:</span><span class="emp">{{info.contactNo}}</span>
+            </div>
+            <div class="col-sm-6 my-1" >
+            
+            <button class="btn btn1" type="submit" >Send Reminder </button>
+            </div>
+            </div>
+            </p-dialog>
         <div class="card-body" *ngIf="EventList">
-            <p-dialog [(visible)]="display">
-                <p-header class="dialogHeader">
-                <img src="../../../assets/logo/profile.png" alt="">
-                Employee Profile
-                </p-header>
-                <div class="row box">
-                <div class="col-sm-6 my-1 txt1">
-                <span> Employee Name:</span> <span class="emp"> Shah</span>
-                </div>
-                <div class="col-sm-6 my-1 txt1">
-                <span class="emp_l"> Invited Events:</span> <span class="emp">05</span>
-                </div>
-                <div class="col-sm-6 my-1 txt1">
-                <span>Designation:</span><span class="emp">Tech Lead</span>
-                </div>
-                <div class="col-sm-6 my-1 txt1">
-                <span class="emp_l1" >Received Events:</span ><span class="emp">05</span>
-                </div>
-                <div class="col-sm-6 my-1 txt1">
-                <span> ID:</span> <span class="emp">41589</span>
-                </div>
-                <div class="col-sm-6 my-1 txt1">
-                <span class="emp_l2">Pending Feedbacks:</span> <span class="emp"> 02</span>
-                </div>
-                <div class="col-sm-6 my-1 txt1">
-                <span>Email:</span> <span class="emp">jayesh.shah@gmail.com</span>
-                </div>
-                <div class="col-sm-6 my-1">
-                
-                </div>
-                <div class="col-sm-6 my-1 txt1">
-                <span >Cell No:</span><span class="emp">+91 9850150473</span>
-                </div>
-                <div class="col-sm-6 my-1" >
-                
-                <button class="btn btn1" type="submit" >Send Reminder </button>
-                </div>
-                </div>
-                </p-dialog>
+               
           <table class="table table-striped" style="margin: auto; width: 85%;">
             <thead>
               <tr class="head">
@@ -181,10 +182,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let data of data | paginate: config ; let i = index" (click)="showDialog()">
+              <tr *ngFor="let data of data | paginate: config ; let i = index" (click)="showDialog(data.empId)">
+                  
                 <td scope="row" class="name">{{i+1}}</td>
                 <td class="name">{{data.toEmpName}}</td>
-                <td align="right" class="blue">{{data.toEmpId}}</td>
+                <td align="right" class="blue">{{data.empId}}</td>
                 <td align="right" class="name">{{data.invited}}</td>
                 <td align="right" class="name">{{data.received}}</td>
                 <td align="right" class="red">{{data.pending}}</td>
@@ -212,8 +214,9 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let data of data" >
-                        <td class="name" align="center" > <input type="radio" class="form-check-input" name="optradio"> </td>
+                      <tr *ngFor="let data of dataInfo" >
+                        <td class="name" align="center" > 
+                          <input type="radio" class="form-check-input" (change)="onChangeRadio(data.toEmpName,data.invited)" id="{{data.invited}}" name="optradio"> </td>
                         <td align="right" class="blue">{{data.toEmpName}}</td>
                         <td align="right" class="name">{{data.invited}}</td>
                       </tr>
@@ -235,9 +238,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let data of data" >
-                    <td class="name" align="center">  <input type="checkbox" class="form-check-input" (change)="toggleEditable($event)" id="materialChecked2" checked>
-                     </td>
+                  <tr *ngFor="let data of dataInfo" >
+                    <td class="name" align="center">  
+                      <div class="form-check">
+                      <input type="checkbox" class="form-check-input" (change)="onChange(data.toEmpName, data.invited , $event.target.checked)" id="{{data.invited}}">
+                   </div>
+                    </td>
                     <td align="right" class="blue">{{data.toEmpName}}</td>
                     <td align="right" class="name">{{data.invited}}</td>
                   </tr>
@@ -268,7 +274,7 @@
                         Event To :
                     </div>
                     <div class="col-sm-9 ">
-                        Sachin Surdikar
+                       {{EventTo}}
                       </div>
                   </div>
                   <div class="row">
@@ -276,17 +282,19 @@
                           Feedback From:
                       </div>
                       <div class="col-sm-9">
-                          Anish oberoi,Mrudula Deshpande,Ram Jogwalkar
+                          <div *ngFor="let data of DataFormArray">
+                           {{data}}
+                          </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-3 text-right">
                             Due Date:
                         </div>
-                        <div class="col-sm-9 ">
-                          <div class="cal">
-                            <input type="date" name="bday">
-                          </div>
+                        <div class="col-sm-9 ">                         
+                              <p-calendar [(ngModel)]="DueDate"  [showIcon]="true" [yearNavigator]="true" yearRange="1900:2019"></p-calendar>
+         
+                           
                           </div>
                       </div>
 

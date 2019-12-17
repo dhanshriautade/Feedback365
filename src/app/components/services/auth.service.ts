@@ -21,5 +21,27 @@ export class AuthService {
      });
     return this.http.get(environment.GetEvent, { headers: headers });
   }
+  GetAllEmployee(){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+     });
+    return this.http.get(environment.GetAllEmployee, { headers: headers });
+
+  }
+  GetTotalEvent(){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+     });
+    return this.http.get(environment.GetTotalEvent, { headers: headers });
+
+    }
+    ProfileInfo(data: any){
+      debugger;
+      let headers = new HttpHeaders({
+        'Content-Type': 'application/json'
+       });
+      return this.http.post(environment.ProfileInfo, data, { headers: headers });
+    }
+  
   
 }
