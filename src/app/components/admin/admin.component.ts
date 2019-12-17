@@ -17,6 +17,7 @@ export class AdminComponent implements OnInit {
   config: any;
   display: boolean = false;
   CreateEvent = false;
+  contentEditable;
   EventList = true;
   constructor(public AuthService: AuthService,) {
     this.name = localStorage.getItem('name');
@@ -37,6 +38,13 @@ export class AdminComponent implements OnInit {
    pageChanged(event){
     this.config.currentPage = event;
   }
+
+  toggleEditable(event) {
+    debugger;
+    if ( event.target.checked ) {
+        this.contentEditable = true;
+   }
+}
 
   OpenEvent(){
     this.CreateEvent= true;
