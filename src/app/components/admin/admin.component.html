@@ -27,12 +27,12 @@
           <div class="row">
             <div class="col-sm-9">
               <div class="my-1"> Total Events</div>
-              <div class="mt-3 event"> {{totalvalue.totalEmployees}} Employees</div>
+              <div class="mt-3 event"> {{totalvalue?.totalEmployees}} Employees</div>
             </div>
 
             <div class="col-sm-3 Events">
               <div class="num">
-                <div class="count">{{totalvalue.totalEvents}}</div>
+                <div class="count">0 {{totalvalue?.totalEvents}}</div>
               </div>
             </div>
           </div>
@@ -45,12 +45,12 @@
           <div class="row">
             <div class="col-sm-9 col-lg-9 col-md-9">
               <div class="my-1"> Completed Feedback</div>
-              <div class="mt-3 event"> {{totalvalue.totalEmployees}} Employees </div>
+              <div class="mt-3 event"> {{totalvalue?.totalEmployees}} Employees </div>
             </div>
 
             <div class="col-sm-3 col-lg-3 col-md-3 Events">
               <div class="num1">
-                <div class="count"> {{totalvalue.totalReceived}} </div>
+                <div class="count"> 0 {{totalvalue?.totalReceived}} </div>
               </div>
             </div>
           </div>
@@ -63,12 +63,12 @@
           <div class="row">
             <div class="col-sm-9 col-lg-9 col-md-9">
               <div class="my-1"> Pending Feedback</div>
-              <div class="mt-3 event"> {{totalvalue.totalEmployees}} Employees </div>
+              <div class="mt-3 event"> {{totalvalue?.totalEmployees}} Employees </div>
             </div>
 
             <div class="col-sm-3 col-lg-3 col-md-3 Events">
               <div class="num2">
-                <div class="count"> {{totalvalue.totalPending}}</div>
+                <div class="count"> 0 {{totalvalue?.totalPending}}</div>
               </div>
             </div>
           </div>
@@ -135,31 +135,31 @@
             </p-header>
             <div class="row box">
             <div class="col-sm-6 my-1 txt1">
-            <span> Employee Name:</span> <span class="emp"> {{info.empName}}</span>
+            <span> Employee Name:</span> <span class="emp"> {{info?.empName}}</span>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span class="emp_l"> Invited Events:</span> <span class="emp">{{info.invitedEvents}}</span>
+            <span class="emp_l"> Invited Events:</span> <span class="emp">{{info?.invitedEvents}}</span>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span>Designation:</span><span class="emp">{{info.designation}}</span>
+            <span>Designation:</span><span class="emp">{{info?.designation}}</span>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span class="emp_l1" >Received Events:</span ><span class="emp">{{info.receivedEvents}}</span>
+            <span class="emp_l1" >Received Events:</span ><span class="emp">{{info?.receivedEvents}}</span>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span> ID:</span> <span class="emp">{{info.empId}}</span>
+            <span> ID:</span> <span class="emp">{{info?.empId}}</span>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span class="emp_l2">Pending Feedbacks:</span> <span class="emp">{{info.pendingEvents}} </span>
+            <span class="emp_l2">Pending Feedbacks:</span> <span class="emp">{{info?.pendingEvents}} </span>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span>Email:</span> <span class="emp">{{info.email}}</span>
+            <span>Email:</span> <span class="emp">{{info?.email}}</span>
             </div>
             <div class="col-sm-6 my-1">
             
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span >Cell No:</span><span class="emp">{{info.contactNo}}</span>
+            <span >Cell No:</span><span class="emp">{{info?.contactNo}}</span>
             </div>
             <div class="col-sm-6 my-1" >
             
@@ -182,7 +182,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let data of data | paginate: config ; let i = index" (click)="showDialog(data.empId)">
+              <tr *ngFor="let data of data | paginate: config ; let i = index" (click)="showDialog(data?.empId)">
                   
                 <td scope="row" class="name">{{i+1}}</td>
                 <td class="name">{{data.toEmpName}}</td>
@@ -214,8 +214,8 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let data of dataInfo" >
-                        <td class="name" align="center" > 
+                      <tr *ngFor="let data of dataInfoFrom | paginate: configerfrom"  >
+                        <td class="name" align="center"> 
                           <input type="radio" class="form-check-input" (change)="onChangeRadio(data.name,data.id)" id="{{data.id}}" name="optradio"> </td>
                         <td align="right" class="blue">{{data.name}}</td>
                         <td align="right" class="name">{{data.id}}</td>
@@ -224,6 +224,8 @@
                       
                     </tbody>
                   </table>  
+                  <pagination-controls (pageChange)="pageChangedfrom($event)"></pagination-controls>
+     
             </div>
             <div class="col-sm-5"> 
               <div class="my-2">
@@ -237,8 +239,8 @@
                     <th scope="col">Employee ID</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr *ngFor="let data of dataInfo" >
+                <tbody class="tbody">
+                  <tr *ngFor="let data of dataInfoSent | paginate: configer" >
                     <td class="name" align="center">  
                       <div class="form-check">
                       <input type="checkbox" class="form-check-input" (change)="onChange(data.name, data.id , $event.target.checked)" id="{{data.id}}">
@@ -250,7 +252,10 @@
     
                   
                 </tbody>
-              </table>  </div>
+              </table> 
+              <pagination-controls (pageChange)="pageChangedsent($event)"></pagination-controls>
+     
+            </div>
             <div class="col-sm-2"></div>
             
               <div class="col-sm-10 underline"> 
@@ -274,17 +279,18 @@
                         Event To :
                     </div>
                     <div class="col-sm-9 ">
-                       {{EventTo}}
+                      <span>{{EventTo}} </span>
+
                       </div>
                   </div>
                   <div class="row">
                       <div class="col-sm-3 text-right">
-                          Feedback From:
+                           Feedback From:
                       </div>
                       <div class="col-sm-9">
-                          <div *ngFor="let data of DataFormArray">
-                           {{data}}
-                          </div>
+                          <span *ngFor="let data of DataFormArray">
+                           {{data}},
+                          </span>
                         </div>
                     </div>
                     <div class="row">
@@ -292,9 +298,8 @@
                             Due Date:
                         </div>
                         <div class="col-sm-9 ">                         
-                              <p-calendar [(ngModel)]="DueDate"  [showIcon]="true" [yearNavigator]="true" yearRange="1900:2019"></p-calendar>
-         
-                           
+                              <!-- <p-calendar [(ngModel)]="DueDate"  [showIcon]="true" [yearNavigator]="true" yearRange="1900:2019"></p-calendar> -->
+                               <input type="text" class="form-control box" [(ngModel)]="DueDate">
                           </div>
                       </div>
 

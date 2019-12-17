@@ -18,6 +18,8 @@ export class AdminComponent implements OnInit {
   DataFormArray: Array<any> = [];
   DataIdFormArray: Array<any> = [];
   config: any;
+  configer: any;
+  configerfrom: any;
   display: boolean = false;
   CreateEvent = false;
   contentEditable;
@@ -27,7 +29,8 @@ export class AdminComponent implements OnInit {
   info;
   CreateNewEvent;
   totalvalue;
-  dataInfo;
+  dataInfoFrom;
+  dataInfoSent;
   constructor(public AuthService: AuthService) {
     this.name = localStorage.getItem('name');
     this.designation= localStorage.getItem('Designation');
@@ -38,8 +41,19 @@ export class AdminComponent implements OnInit {
     })
   
     this.AuthService.GetAllEmployee().subscribe(res => {
-      this.dataInfo = res;
-      // console.log('lsist', this.totalvalue);
+      this.dataInfoFrom = res;
+      this.dataInfoSent =res;
+      this.configer = {
+        itemsPerPage: 3,
+        currentPage: 1,
+        totalItems: this.dataInfoSent.count
+      };
+      this.configerfrom = {
+        itemsPerPage: 3,
+        currentPage: 1,
+        totalItems: this.dataInfoFrom.count
+      };
+     
     })
 
    
@@ -47,7 +61,14 @@ export class AdminComponent implements OnInit {
    pageChanged(event){
     this.config.currentPage = event;
   }
-
+  pageChangedsent(event){
+    this.configer.currentPage = event;
+  }
+  pageChangedfrom(event){
+    this.configerfrom.currentPage = event;
+  }
+ 
+ 
   toggleEditable(event) {
       if ( event.target.checked ) {
         this.contentEditable = true;
@@ -91,12 +112,16 @@ export class AdminComponent implements OnInit {
      
       }
       Add(){     
-       this.CreateNewEvent = {
+       this.CreateNewEvent = [{
+            "toEmpId" : this.EventToId,
+            "fromEmpId":this.DataIdFormArray,
+            "dueDate" : this.DueDate,
+       }];
+     console.log('datasent',this.CreateNewEvent);
+     this.AuthService.SentEvent(this.CreateNewEvent).subscribe(res => {  
 
-       }
+     })
 
-        console.log('date', this.DueDate);
-        
       }
 
   CloseEvent(){

@@ -9,6 +9,7 @@ export const environment = {
   GetTotalEvent:'http://localhost:9002/feedback/getTotalSummary',
   ProfileInfo:'http://localhost:9002/feedback/getUserDetails',
   GetAllEmployee:'http://localhost:9002/feedback/getAllEmployees',
+  SentEvent:'http://localhost:9002/feedback/addForm',
 };
 
 /*
