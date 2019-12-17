@@ -116,17 +116,21 @@ export class AdminComponent implements OnInit {
             "toEmpId" : this.EventToId,
             "fromEmpId":this.DataIdFormArray,
             "dueDate" : this.DueDate,
+            "formStatus" : "Completed"
        }];
      console.log('datasent',this.CreateNewEvent);
      this.AuthService.SentEvent(this.CreateNewEvent).subscribe(res => {  
 
      })
-
-      }
+        }
 
   CloseEvent(){
     this.CreateEvent= false;
     this.EventList = true;
+    this.AuthService.GetEvent().subscribe(res => {
+      this.data =res;
+     
+    })
   }
 
   showDialog(id) {
