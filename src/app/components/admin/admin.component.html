@@ -135,7 +135,11 @@
             </p-header>
             <div class="row box">
             <div class="col-sm-6 my-1 txt1">
-            <span> Employee Name:</span> <span class="emp"> {{info?.empName}}</span>
+            
+            <span> Employee Name:</span> 
+         
+            <span class="emp"> {{info?.empName}}</span>
+        
             </div>
             <div class="col-sm-6 my-1 txt1">
             <span class="emp_l"> Invited Events:</span> <span class="emp">{{info?.invitedEvents}}</span>
@@ -163,7 +167,7 @@
             </div>
             <div class="col-sm-6 my-1" >
             
-            <button class="btn btn1" type="submit" >Send Reminder </button>
+            <!-- <button class="btn btn1" type="submit" >Send Reminder </button> -->
             </div>
             </div>
             </p-dialog>
@@ -299,7 +303,7 @@
                         </div>
                         <div class="col-sm-9 ">                         
                               <!-- <p-calendar [(ngModel)]="DueDate"  [showIcon]="true" [yearNavigator]="true" yearRange="1900:2019"></p-calendar> -->
-                               <input type="text" class="form-control box" [(ngModel)]="DueDate">
+                               <input type="text" class="form-control datebox" [(ngModel)]="DueDate">
                           </div>
                       </div>
 
