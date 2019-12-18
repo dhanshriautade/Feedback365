@@ -103,8 +103,9 @@
     }
 
     .auto{
-        font-weight: 700;
-    color: #0000FF;
+        font-weight: 1000;
+
+        color:#3E76FF;
     }
 
     .head{
@@ -185,22 +186,22 @@
             background-color: #5632FF;
             margin-top: 18px;
             border-radius: 73px;
-            width: 59px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
           }
           .num1{
             background-color: #00E35B;
             margin-top: 18px;
             border-radius: 73px;
-            width: 59px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
           }
           .num2{
             background-color: #DF0058;
             margin-top: 18px;
             border-radius: 73px;
-            width: 59px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
           }
 
           .event{
@@ -328,6 +329,7 @@
             }
             .dte1{
             color: #5D7C8C;
+            font-weight: bold;
             }
         //     .strip1 {
         //     margin-top: 13px;
@@ -342,9 +344,15 @@
 
         .namestrip1{
                 font-weight: 700;
-                color: blue;
+                color:#3E76FF;
                 }
 
                 .oo{
                     text-align: end;
+                }
+                
+                  .feedback{
+                    font-weight: bold;
+                    color: #223239;
+                                         
                 }

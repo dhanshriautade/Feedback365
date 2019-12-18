@@ -126,11 +126,14 @@
          }
 
          .blue{
-             color: #2C75FF
+             color: #2C75FF;
+             font-weight: bold;
+             
          }
 
          .red{
              color: #D2345C;
+             font-weight: bold;
          }
 
          .name{
@@ -185,22 +188,22 @@
             background-color: #5632FF;
             margin-top: 18px;
             border-radius: 73px;
-            width: 59px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
           }
           .num1{
             background-color: #00E35B;
             margin-top: 18px;
             border-radius: 73px;
-            width: 59px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
           }
           .num2{
             background-color: #DF0058;
             margin-top: 18px;
             border-radius: 73px;
-            width: 59px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
           }
 
           .event{
@@ -326,3 +329,4 @@
                          text-align: end;
                          color: #526671;
                      }
+                    
