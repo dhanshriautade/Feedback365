@@ -14,6 +14,12 @@ export class AuthService {
      });
     return this.http.post(environment.Login, data, { headers: headers });
   }
+  SentAnswer(data: any){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+     });
+    return this.http.post(environment.Login, data, { headers: headers });
+  }
   SentEvent(data:any){
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -32,6 +38,13 @@ export class AuthService {
       'Content-Type': 'application/json'
      });
     return this.http.get(environment.GetAllEmployee, { headers: headers });
+
+  }
+  GetAllQuestion(){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+     });
+    return this.http.get(environment.GetAllQuestion, { headers: headers });
 
   }
   GetTotalEvent(){

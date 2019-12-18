@@ -68,156 +68,117 @@
                 </div>
                 <div class="row fourth">
                     <div class="panel_arg ">
-                        <p-panel header="Planning and delivering" [toggleable]="true"
+                        <p-panel header="{{question[0].sectionName}}" [toggleable]="true"
                             [style]="{'margin-bottom':'20px'}">
                             <div class="row">
                                 <div class="col-sm-6 my-1">
-                                        Q.1 Sets clear and realistic goals
+                                                Q.{{question[0].questionId}}{{question[0].question}}
                                 </div>
                                 <div class="col-sm-6 my-1">
                                         <div class="row">
+                                            <div class="col-sm-2">                                           
+                                                <button type="button" (click)="que_1(1,1)" class="btn btn1 btn-light">1</button>        
+                                           </div>
                                             <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="1">
+                                                        <button type="button" (click)="que_1(1,2)" class="btn btn1 btn-light">2</button> 
                                             </div>
                                             <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="2">
+                                                        <button type="button" (click)="que_1(1,3)" class="btn btn1 btn-light">3</button> 
                                             </div>
                                             <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="3">
+                                                        <button type="button" (click)="que_1(1,4)" class="btn btn1 btn-light">4</button> 
+
                                             </div>
                                             <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="4">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="5">
+                                                        <button type="button" (click)="que_1(1,5)" class="btn btn1 btn-light">5</button> 
+
                                             </div>
                                        
                                         </div>
                                 </div>
                                 
                                 <div class="col-sm-6 my-1">
-                                        Q.2 Taking on an appropriate workload and providing sensible
+                                                Q.{{question[1].questionId}}{{question[1].question}}      
                                 </div>
                                 <div class="col-sm-6 my-1">
-                                        <div class="row">
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="1">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="2">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="3">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="4">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="5">
-                                            </div>
-                                       
-                                        </div>
+                                                <div class="row">
+                                                                <div class="col-sm-2">                                           
+                                                                    <button type="button" (click)="que_1(2,1)" class="btn btn1 btn-light">1</button>        
+                                                               </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(2,2)" class="btn btn1 btn-light">2</button> 
+                                                                </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(2,3)" class="btn btn1 btn-light">3</button> 
+                                                                </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(2,4)" class="btn btn1 btn-light">4</button> 
+                    
+                                                                </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(2,5)" class="btn btn1 btn-light">5</button> 
+                    
+                                                                </div>
+                                                           
+                                                            </div>
                                 </div>
                                 <div class="col-sm-6 my-1">
-                                        Q.3 Productive both when working alone and in groups
+                                                Q.{{question[2].questionId}}{{question[2].question}}       
                                 </div>
                                 <div class="col-sm-6 my-1">
-                                        <div class="row">
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="1">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="2">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="3">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="4">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="5">
-                                            </div>
-                                       
-                                        </div>
+                                                <div class="row">
+                                                                <div class="col-sm-2">                                           
+                                                                    <button type="button" (click)="que_1(3,1)" class="btn btn1 btn-light">1</button>        
+                                                               </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(3,2)" class="btn btn1 btn-light">2</button> 
+                                                                </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(3,3)" class="btn btn1 btn-light">3</button> 
+                                                                </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(3,4)" class="btn btn1 btn-light">4</button> 
+                    
+                                                                </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(3,5)" class="btn btn1 btn-light">5</button> 
+                    
+                                                                </div>
+                                                           
+                                                            </div>
                                 </div>
                                 <div class="col-sm-6 my-1">
-                                        Q.4 Effective at identifying problems,breaking these down and
-                                        reposing solutions
+                                                Q.{{question[3].questionId}}{{question[3].question}}    
                                 </div>
                                 <div class="col-sm-6 my-1">
-                                        <div class="row">
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="1">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="2">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="3">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="4">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="5">
-                                            </div>
-                                       
-                                        </div>
+                                                <div class="row">
+                                                                <div class="col-sm-2">                                           
+                                                                    <button type="button" (click)="que_1(4,1)" class="btn btn1 btn-light">1</button>        
+                                                               </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(4,2)" class="btn btn1 btn-light">2</button> 
+                                                                </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(4,3)" class="btn btn1 btn-light">3</button> 
+                                                                </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(4,4)" class="btn btn1 btn-light">4</button> 
+                    
+                                                                </div>
+                                                                <div class="col-sm-2">
+                                                                            <button type="button" (click)="que_1(4,5)" class="btn btn1 btn-light">5</button> 
+                    
+                                                                </div>
+                                                           
+                                                            </div>
                                 </div>
-                                <div class="col-sm-6 my-1">
-                                        Q.5 Technically competent-able to produce quality work
-                                </div>
-                                <div class="col-sm-6 my-1">
-                                        <div class="row">
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="1">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="2">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="3">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="4">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                    <input _ngcontent-otu-c3="" class="form-control box" disabled="" id="usr"
-                                                    type="text" value="5">
-                                            </div>
-                                       
-                                        </div>
-                                </div>
+                               
+                                
                                 
                             </div>
                         </p-panel>
 
-                        <p-panel header="Analysis and decision making" [toggleable]="true"
+                        <!-- <p-panel header="Analysis and decision making" [toggleable]="true"
                             [style]="{'margin-bottom':'20px'}">
                             <div class="row">
                                     <div class="col-sm-6 my-1">
@@ -364,9 +325,9 @@
                                     </div>
                                     
                                 </div>
-                        </p-panel>
+                        </p-panel> -->
 
-                        <p-panel header="Leadership and communication " [toggleable]="true"
+                        <!-- <p-panel header="Leadership and communication " [toggleable]="true"
                             [style]="{'margin-bottom':'20px'}">
                             <div class="row">
                                     <div class="col-sm-6 my-1">
@@ -513,8 +474,8 @@
                                     </div>
                                     
                                 </div>
-                        </p-panel>
-                        <p-panel header="Do you have any other comments? (Optional)" [toggleable]="true"
+                        </p-panel> -->
+                        <!-- <p-panel header="Do you have any other comments? (Optional)" [toggleable]="true"
                             [style]="{'margin-bottom':'20px'}">
                             <div class="row">
                                     <div class="col-sm-6 my-1">
@@ -661,14 +622,14 @@
                                     </div>
                                     
                                 </div>
-                        </p-panel>
+                        </p-panel> -->
                     </div>
                 </div>
                 <div class="row six_panel">
                     <div class=" col-sm-10">
                     </div>
                     <div class=" col-sm-2 mt-2 ">
-                        <button type="button" class="btn btn-primary mb-2">Submit</button>
+                        <button type="button" class="btn btn-primary mb-2" (click)="SentAnswer()">Submit</button>
                     </div>
                 </div>
             </div>

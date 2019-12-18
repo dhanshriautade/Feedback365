@@ -10,6 +10,7 @@ export const environment = {
   ProfileInfo:url + 'feedback/getUserDetails',
   GetAllEmployee:url + 'feedback/getAllEmployees',
   SentEvent:url + 'feedback/addForm',
+  GetAllQuestion: url + 'feedback/getQuestions'
 };
 
 /*
