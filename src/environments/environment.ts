@@ -1,15 +1,15 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-
+var url = 'http://localhost:9002/'
 export const environment = {
   production: false,
-  Login:'http://localhost:9001/feedback/accountValidate',
-  GetEvent:'http://localhost:9001/feedback/getEventList',
-  GetTotalEvent:'http://localhost:9001/feedback/getTotalSummary',
-  ProfileInfo:'http://localhost:9001/feedback/getUserDetails',
-  GetAllEmployee:'http://localhost:9001/feedback/getAllEmployees',
-  SentEvent:'http://localhost:9001/feedback/addForm',
+  Login: url + 'feedback/accountValidate',
+  GetEvent:url + 'feedback/getEventList',
+  GetTotalEvent: url + 'feedback/getTotalSummary',
+  ProfileInfo:url + 'feedback/getUserDetails',
+  GetAllEmployee:url + 'feedback/getAllEmployees',
+  SentEvent:url + 'feedback/addForm',
 };
 
 /*
