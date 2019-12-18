@@ -195,7 +195,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let data of data | paginate: config |filter:term; let i = index" (click)="showDialog(data?.empId)">
+              <tr *ngFor="let data of data |filter:term | sort:'dueDate' | paginate: config ; let i = index" (click)="showDialog(data?.empId)">
                   
                 <td scope="row" class="name">{{i+1}}</td>
                 <td class="name">{{data?.toEmpName}}</td>
