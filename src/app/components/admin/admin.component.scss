@@ -249,6 +249,10 @@
             .emp{
             font-weight: bold;
             margin-left: 4px;
+            .empp{
+                color:#DF0058;
+            }
+           
             }
             .emp_l{
             margin-left: 148px;
@@ -312,4 +316,13 @@
 
                     .datebox{
                          border: 1px solid black;
+                     }
+                     .emplo{
+                        padding: 0px !important;
+                        font-weight: bold;
+                        color: #3E5A65;
+                     }
+                     .empl_o{
+                         text-align: end;
+                         color: #526671;
                      }
