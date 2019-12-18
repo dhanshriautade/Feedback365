@@ -135,35 +135,44 @@
             </p-header>
             <div class="row box">
             <div class="col-sm-6 my-1 txt1">
-            
-            <span> Employee Name:</span> 
+            <div class="row">
+            <div class="col-sm-6"> Employee Name:</div> 
          
-            <span class="emp"> {{info?.empName}}</span>
-        
+            <div class="col-sm-6"> {{info?.empName}}</div>
+            </div>
             </div>
             <div class="col-sm-6 my-1 txt1">
             <span class="emp_l"> Invited Events:</span> <span class="emp">{{info?.invitedEvents}}</span>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span>Designation:</span><span class="emp">{{info?.designation}}</span>
+              <div class="row">
+            <div class="col-sm-6">Designation:</div>
+            <div class="col-sm-6">{{info?.designation}}</div>
+            </div>
             </div>
             <div class="col-sm-6 my-1 txt1">
             <span class="emp_l1" >Received Events:</span ><span class="emp">{{info?.receivedEvents}}</span>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span> ID:</span> <span class="emp">{{info?.empId}}</span>
+              <div class="row">
+            <div class="col-sm-6"> ID:</div> <div class="col-sm-6">{{info?.empId}}</div>
+            </div>
             </div>
             <div class="col-sm-6 my-1 txt1">
             <span class="emp_l2">Pending Feedbacks:</span> <span class="emp">{{info?.pendingEvents}} </span>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span>Email:</span> <span class="emp">{{info?.email}}</span>
+              <div class="row">
+            <div class="col-sm-5">Email:</div> <div class="col-sm-7">{{info?.email}}</div>
+            </div>
             </div>
             <div class="col-sm-6 my-1">
             
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span >Cell No:</span><span class="emp">{{info?.contactNo}}</span>
+              <div class="row">
+            <div class="col-sm-6" >Cell No:</div><div class="col-sm-6">{{info?.contactNo}}</div>
+            </div>
             </div>
             <div class="col-sm-6 my-1" >
             
