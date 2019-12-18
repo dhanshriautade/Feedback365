@@ -25,12 +25,12 @@
       <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
         <div class="info-card gradient">
           <div class="row">
-            <div class="col-sm-9">
+            <div class="col-sm-10">
               <div class="my-1"> Total Events</div>
               <div class="mt-3 event"> {{totalvalue?.totalEmployees}} Employees</div>
             </div>
 
-            <div class="col-sm-3 Events">
+            <div class="col-sm-2 Events">
               <div class="num">
                 <div class="count">0 {{totalvalue?.totalEvents}}</div>
               </div>
@@ -43,12 +43,12 @@
       <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
         <div class="info-card gradient">
           <div class="row">
-            <div class="col-sm-9 col-lg-9 col-md-9">
+            <div class="col-sm-10 col-lg-10 col-md-10">
               <div class="my-1"> Completed Feedback</div>
               <div class="mt-3 event"> {{totalvalue?.totalEmployees}} Employees </div>
             </div>
 
-            <div class="col-sm-3 col-lg-3 col-md-3 Events">
+            <div class="col-sm-2 col-lg-2 col-md-2 Events">
               <div class="num1">
                 <div class="count"> {{totalvalue?.totalReceived}} </div>
               </div>
@@ -61,12 +61,12 @@
       <div class="col-lg-2 col-sm-2 col-md-2 col-2 px-3 clickable">
         <div class="info-card gradient">
           <div class="row">
-            <div class="col-sm-9 col-lg-9 col-md-9">
+            <div class="col-sm-10 col-lg-10 col-md-10">
               <div class="my-1"> Pending Feedback</div>
               <div class="mt-3 event"> {{totalvalue?.totalEmployees}} Employees </div>
             </div>
 
-            <div class="col-sm-3 col-lg-3 col-md-3 Events">
+            <div class="col-sm-2 col-lg-2 col-md-2 Events">
               <div class="num2">
                 <div class="count"> 0 {{totalvalue?.totalPending}}</div>
               </div>
@@ -136,34 +136,34 @@
             <div class="row box">
             <div class="col-sm-6 my-1 txt1">
             <div class="row">
-            <div class="col-sm-6"> Employee Name:</div> 
+            <div class="col-sm-6 empl_o"> Employee Name :</div> 
          
-            <div class="col-sm-6"> {{info?.empName}}</div>
+            <div class="col-sm-6 emplo"> {{info?.empName}}</div>
             </div>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span class="emp_l"> Invited Events:</span> <span class="emp">{{info?.invitedEvents}}</span>
-            </div>
-            <div class="col-sm-6 my-1 txt1">
-              <div class="row">
-            <div class="col-sm-6">Designation:</div>
-            <div class="col-sm-6">{{info?.designation}}</div>
-            </div>
-            </div>
-            <div class="col-sm-6 my-1 txt1">
-            <span class="emp_l1" >Received Events:</span ><span class="emp">{{info?.receivedEvents}}</span>
+            <span class="emp_l"> Invited Events :</span> <span class="emp">{{info?.invitedEvents}}</span>
             </div>
             <div class="col-sm-6 my-1 txt1">
               <div class="row">
-            <div class="col-sm-6"> ID:</div> <div class="col-sm-6">{{info?.empId}}</div>
+            <div class="col-sm-6 empl_o">Designation :</div>
+            <div class="col-sm-6 emplo">{{info?.designation}}</div>
             </div>
             </div>
             <div class="col-sm-6 my-1 txt1">
-            <span class="emp_l2">Pending Feedbacks :</span> <span class="emp">{{info?.pendingEvents}} </span>
+            <span class="emp_l1" >Received Events :</span ><span class="emp">{{info?.receivedEvents}}</span>
             </div>
             <div class="col-sm-6 my-1 txt1">
               <div class="row">
-            <div class="col-sm-5">Email:</div> <div class="col-sm-7">{{info?.email}}</div>
+            <div class="col-sm-6 empl_o"> ID :</div> <div class="col-sm-6 emplo">{{info?.empId}}</div>
+            </div>
+            </div>
+            <div class="col-sm-6 my-1 txt1">
+            <span class="emp_l2">Pending Feedbacks :</span> <span class="emp" style="color:#DF0058;">{{info?.pendingEvents}} </span>
+            </div>
+            <div class="col-sm-6 my-1 txt1">
+              <div class="row">
+            <div class="col-sm-6 empl_o">Email :</div> <div class="col-sm-6 emplo ">{{info?.email}}</div>
             </div>
             </div>
             <div class="col-sm-6 my-1">
@@ -171,7 +171,7 @@
             </div>
             <div class="col-sm-6 my-1 txt1">
               <div class="row">
-            <div class="col-sm-6" >Cell No:</div><div class="col-sm-6">{{info?.contactNo}}</div>
+            <div class="col-sm-6 empl_o" >Cell No :</div><div class="col-sm-6 emplo">{{info?.contactNo}}</div>
             </div>
             </div>
             <div class="col-sm-6 my-1" >
