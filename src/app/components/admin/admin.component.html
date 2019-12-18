@@ -94,7 +94,7 @@
                </div>
             <div class="p-2">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search events">
+                <input type="text" class="form-control"  [(ngModel)]="term" placeholder="Search events">
                 <div class="input-group-append">
                   <button class="btn btn-secondary" type="button">
                     <i class="fa fa-search"></i>
@@ -195,15 +195,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let data of data | paginate: config ; let i = index" (click)="showDialog(data?.empId)">
+              <tr *ngFor="let data of data | paginate: config |filter:term; let i = index" (click)="showDialog(data?.empId)">
                   
                 <td scope="row" class="name">{{i+1}}</td>
-                <td class="name">{{data.toEmpName}}</td>
-                <td align="right" class="blue">{{data.empId}}</td>
-                <td align="right" class="name">{{data.invited}}</td>
-                <td align="right" class="name">{{data.received}}</td>
-                <td align="right" class="red">{{data.pending}}</td>
-                <td class="name">{{data.dueDate}}</td>
+                <td class="name">{{data?.toEmpName}}</td>
+                <td align="right" class="blue">{{data?.empId}}</td>
+                <td align="right" class="name">{{data?.invited}}</td>
+                <td align="right" class="name">{{data?.received}}</td>
+                <td align="right" class="red">{{data?.pending}}</td>
+                <td class="name">{{data?.dueDate}}</td>
               </tr>
 
               
