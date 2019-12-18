@@ -138,6 +138,7 @@ export class AdminComponent implements OnInit {
      this.data = {
       "empId":  id
     }
+    
     this.AuthService.ProfileInfo(this.data).subscribe(res => {  
       this.info = res;
     })

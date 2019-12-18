@@ -20,9 +20,11 @@ import {DialogModule} from 'primeng/dialog';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {CalendarModule} from 'primeng/calendar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { SortPipe } from './components/admin/sort.component';
 @NgModule({
   declarations: [
     AppComponent,
+    SortPipe,
     LoginComponent,
     EmployeeComponent,
     AdminComponent,
