@@ -42,7 +42,7 @@ export class AuthService {
 
     }
     ProfileInfo(data: any){
-      debugger;
+      // debugger;
       let headers = new HttpHeaders({
         'Content-Type': 'application/json'
        });

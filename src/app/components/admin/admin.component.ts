@@ -12,6 +12,7 @@ export class AdminComponent implements OnInit {
   id;
   data;
   name;
+  term;
   designation;
   empid;
   EventTo;

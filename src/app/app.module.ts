@@ -19,7 +19,7 @@ import { ToastrModule } from 'ngx-toastr';
 import {DialogModule} from 'primeng/dialog';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {CalendarModule} from 'primeng/calendar';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +33,7 @@ import {CalendarModule} from 'primeng/calendar';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    Ng2SearchPipeModule,
     ReactiveFormsModule,
     CalendarModule,
     AccordionModule,
