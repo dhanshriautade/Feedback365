@@ -1,5 +1,7 @@
 import { Component, OnInit, Renderer2, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { AuthService } from 'src/app/components/services/auth.service';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-emp-feedback',
   templateUrl: './emp-feedback.component.html',
@@ -7,8 +9,7 @@ import { AuthService } from 'src/app/components/services/auth.service';
 })
 export class EmpFeedbackComponent implements OnInit ,AfterViewInit {
   ngAfterViewInit(): void {
-    console.log(this.q1.nativeElement.childNodes[0].childNodes[0].className)
-    this.renderer.addClass(this.q1.nativeElement.childNodes[2].childNodes[0],"active");
+    // console.log(this.q1.nativeElement.childNodes[0].childNodes[0].className),"active");
   }
   question;
   data;
@@ -16,6 +17,7 @@ export class EmpFeedbackComponent implements OnInit ,AfterViewInit {
   toid;
   toname;
   Duedate;
+  spinner = false;
   arr: any = []
   @ViewChild('q1',{static:false}) q1:ElementRef;
   @ViewChild('q2',{static:false}) q2:ElementRef;
@@ -25,7 +27,7 @@ export class EmpFeedbackComponent implements OnInit ,AfterViewInit {
     q1: string,
     q2: string
   }
-  constructor(public AuthService: AuthService,private renderer:Renderer2) {
+  constructor(public AuthService: AuthService,private renderer:Renderer2,private router: Router,private toastr: ToastrService,) {
     this.empid = localStorage.getItem('id');
     this.toname = localStorage.getItem('Toname');
     this.Duedate = localStorage.getItem('Deudate');
@@ -121,8 +123,21 @@ export class EmpFeedbackComponent implements OnInit ,AfterViewInit {
 
     }   
   }
+  goToEmployee(){
+    this.router.navigateByUrl('/main/employee');
+  }
 
   SentAnswer(){
+      var i= this.arr[0];
+      var j = this.arr[1];
+      var x = this.arr[2];
+      var z = this.arr[3];
+    this.renderer.removeClass(this.q1.nativeElement.childNodes[i-1].childNodes[0],"active"); 
+    this.renderer.removeClass(this.q2.nativeElement.childNodes[j-1].childNodes[0],"active");   
+    this.renderer.removeClass(this.q3.nativeElement.childNodes[x-1].childNodes[0],"active");   
+    this.renderer.removeClass(this.q4.nativeElement.childNodes[z-1].childNodes[0],"active");     
+  
+    this.spinner = true;
     this.data = {
       "fromEmpId" : this.empid,
       "toEmpId": this.toid,
@@ -130,6 +145,8 @@ export class EmpFeedbackComponent implements OnInit ,AfterViewInit {
       }
     console.log('data',this.data);
     this.AuthService.SentAnswer(this.data).subscribe(res => {  
+      this.spinner = false;
+      this.toastr.success('Successfully sent the feedback');
 
     })
   }

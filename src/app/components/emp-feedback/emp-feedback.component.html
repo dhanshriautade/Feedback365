@@ -11,7 +11,7 @@
                                 {{toname}}
                         </span> <span class="feed_b">Due Date</span> : <span class="dtee"> {{Duedate}}</span>
                     </div>
-                    <div class="col-sm-7 end">
+                    <div class="col-sm-7 end" (click)="goToEmployee()">
                         dashboard <img class="mr-1 ml-2" src="../../../assets/logo/ic.png" alt="">
                     </div>
                 </div>
@@ -631,7 +631,8 @@
                     <div class=" col-sm-10">
                     </div>
                     <div class=" col-sm-2 mt-2 ">
-                        <button type="button" class="btn btn-primary mb-2" (click)="SentAnswer()">Submit</button>
+                        <button type="button" class="btn btn-primary mb-2" (click)="SentAnswer()">Submit<i
+                                *ngIf="spinner" class="pi pi-spin pi-spinner ml-1"></i></button>
                     </div>
                 </div>
             </div>
