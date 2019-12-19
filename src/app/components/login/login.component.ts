@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
      localStorage.setItem('id',this.res.empId);
      this.spinner =false;
  
-    if(this.res.role == 'admin'){
+    if(this.res.role == 'admin' || this.res.role == 'Admin'){
       this.router.navigateByUrl('/main/admin');
     }
     else if(this.res.role == 'employee' || this.res.role == 'Employee'){  

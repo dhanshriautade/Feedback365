@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit } from '@angular/core';
 import { FormGroup, FormArray, FormControl, FormBuilder} from '@angular/forms';
 import { AuthService } from 'src/app/components/services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -44,7 +45,7 @@ export class AdminComponent implements OnInit {
  EventToIdselect;
  dataInfoFromcopy;
  isActive;
-  constructor(public AuthService: AuthService) {
+  constructor(public AuthService: AuthService,private toastr: ToastrService) {
     this.name = localStorage.getItem('name');
     this.designation= localStorage.getItem('Designation');
     this.empid = localStorage.getItem('id');
@@ -100,6 +101,8 @@ export class AdminComponent implements OnInit {
        totalItems: this.data.count
      };
     })
+
+  
     
   }
 
@@ -162,9 +165,14 @@ export class AdminComponent implements OnInit {
             "dueDate" : this.DueDate,
             "formStatus" : "Completed"
        }];
-     console.log('datasent',this.CreateNewEvent);
      this.AuthService.SentEvent(this.CreateNewEvent).subscribe(res => {  
       this.spinner =false;
+      this.toastr.success('Successfully Created Event !!!');
+      this.EventTo = null;
+      this.EventToId = null;
+      this.DataFormArray = null;
+      this.DataIdFormArray =  null;
+
      })
         }
 
@@ -174,6 +182,10 @@ export class AdminComponent implements OnInit {
     this.AuthService.GetEvent().subscribe(res => {
       this.data =res;
      
+    })
+    this.AuthService.GetTotalEvent().subscribe(res => {
+      this.totalvalue = res;
+      // console.log('lsist', this.totalvalue);
     })
   }
 
