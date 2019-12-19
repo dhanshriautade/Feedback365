@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit } from '@angular/core';
 import { FormGroup, FormArray, FormControl, FormBuilder} from '@angular/forms';
 import { AuthService } from 'src/app/components/services/auth.service';
 @Component({
@@ -7,6 +7,8 @@ import { AuthService } from 'src/app/components/services/auth.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+  @ViewChildren("checkboxes") checkboxes: QueryList<ElementRef>;
+
   results : string[];
   text: string;
   id;
@@ -18,6 +20,8 @@ export class AdminComponent implements OnInit {
   EventTo;
   DataFormArray: Array<any> = [];
   DataIdFormArray: Array<any> = [];
+  DataFormArrayselect: Array<any> = [];
+  DataIdFormArrayselect: Array<any> = [];
   config: any;
   configer: any;
   configerfrom: any;
@@ -32,6 +36,14 @@ export class AdminComponent implements OnInit {
   totalvalue;
   dataInfoFrom;
   dataInfoSent;
+  spinner = false;
+  EventToselect;
+  adminForm: any;
+  optradio=null;
+  submitted: boolean;
+ EventToIdselect;
+ dataInfoFromcopy;
+ isActive;
   constructor(public AuthService: AuthService) {
     this.name = localStorage.getItem('name');
     this.designation= localStorage.getItem('Designation');
@@ -95,24 +107,55 @@ export class AdminComponent implements OnInit {
   onChange(email:string, id , isChecked: boolean) {
    
     if(isChecked) {
-      this.DataFormArray.push(email);
-      this.DataIdFormArray.push(id);
+      this.DataFormArrayselect.push(email);
+      this.DataIdFormArrayselect.push(id);
     } else {
-      let index = this.DataFormArray.indexOf(email);
-      let indexid = this.DataIdFormArray.indexOf(id);
-      this.DataFormArray.splice(index,1);
-      this.DataIdFormArray.splice(indexid,1);
+      let index = this.DataFormArrayselect.indexOf(email);
+      let indexid = this.DataIdFormArrayselect.indexOf(id);
+      this.DataFormArrayselect.splice(index,1);
+      this.DataIdFormArrayselect.splice(indexid,1);
     }  
 
       }
 
     
       onChangeRadio(name:string, id){
-        this.EventTo = name;
-        this.EventToId= id;
+        this.EventToselect = name;
+        this.EventToIdselect= id;
      
       }
-      Add(){     
+      Reset(){
+       this.isActive = null;
+       this.checkboxes.forEach((element) => {
+        element.nativeElement.checked = false;
+      });
+      this.EventTo = null;
+      this.EventToId = null;
+      this.DataFormArray = null;
+      this.DataIdFormArray =  null;
+     this.EventToselect = null;
+      this.EventToIdselect =null;
+      // this.DataFormArrayselect = null;
+      // this.DataIdFormArrayselect = null;
+      
+      }
+
+      AddMenu(){
+        this.EventTo = null;
+        this.EventTo = this.EventToselect;
+        this.EventToId = this.EventToIdselect;
+        this.DataFormArray = this.DataFormArrayselect;
+        this.DataIdFormArray =  this.DataIdFormArrayselect;
+      }
+      Resetform(){
+        this.EventTo = null;
+        this.EventToId = null;
+        this.DataFormArray = null;
+        this.DataIdFormArray =  null;
+     
+      }
+      Add(){ 
+        this.spinner =true;    
        this.CreateNewEvent = [{
             "toEmpId" : this.EventToId,
             "fromEmpId":this.DataIdFormArray,
@@ -121,7 +164,7 @@ export class AdminComponent implements OnInit {
        }];
      console.log('datasent',this.CreateNewEvent);
      this.AuthService.SentEvent(this.CreateNewEvent).subscribe(res => {  
-
+      this.spinner =false;
      })
         }
 
@@ -156,8 +199,7 @@ export class AdminComponent implements OnInit {
        totalItems: this.data.count
      };
     })
-
-    
   }
-
+  
 }
+

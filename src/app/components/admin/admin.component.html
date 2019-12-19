@@ -229,7 +229,9 @@
                     <tbody>
                       <tr *ngFor="let data of dataInfoFrom | paginate: configerfrom"  >
                         <td class="name" align="center"> 
-                          <input type="radio" class="form-check-input" (change)="onChangeRadio(data.name,data.id)" id="{{data.id}}" name="optradio"> </td>
+                          <input type="radio" name="{{data.name}}" value="{{data.id}}" (change)="onChangeRadio(data.name,data.id)" [(ngModel)]="isActive">
+
+                          <!-- <input type="radio" class="form-check-input"  (change)="onChangeRadio(data.name,data.id)" id="{{data.id}}"  name="optradio"> </td> -->
                         <td align="right" class="blue">{{data.name}}</td>
                         <td align="right" class="name">{{data.id}}</td>
                       </tr>
@@ -256,7 +258,8 @@
                   <tr *ngFor="let data of dataInfoSent | paginate: configer" >
                     <td class="name" align="center">  
                       <div class="form-check">
-                      <input type="checkbox" class="form-check-input" (change)="onChange(data.name, data.id , $event.target.checked)" id="{{data.id}}">
+                   
+                      <input #checkboxes type="checkbox" class="form-check-input"  (change)="onChange(data.name, data.id , $event.target.checked)" id="{{data.id}}">
                    </div>
                     </td>
                     <td align="right" class="blue">{{data.name}}</td>
@@ -273,7 +276,7 @@
             
               <div class="col-sm-10 underline"> 
                   <button class="btn btn-primary mr-1 add_r" (click)="Reset()">Reset</button>
-                  <button class="btn btn-primary ml-1 add_b" (click)="Add()">Add</button>
+                  <button class="btn btn-primary ml-1 add_b" (click)="AddMenu()">Add</button>
               </div>
               <div class="col-sm-2">
 
@@ -301,8 +304,8 @@
                            Feedback From:
                       </div>
                       <div class="col-sm-9">
-                          <span *ngFor="let data of DataFormArray">
-                           {{data}},
+                          <span>
+                           {{DataFormArray}}
                           </span>
                         </div>
                     </div>
@@ -332,8 +335,9 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-10 underline"> 
-                        <button class="btn btn-primary mr-1 add_r" (click)="Reset()">Cancel</button>
-                        <button class="btn btn-primary ml-1" (click)="Add()">Create  Event</button>
+                        <button class="btn btn-primary mr-1 add_r" (click)="Resetform()">Cancel</button>
+                        <button class="btn btn-primary" (click)="Add()">Create  Event <i
+                          *ngIf="spinner" class="pi pi-spin pi-spinner ml-1"></i> </button>
                       </div>
                       <div class="sol-sm-2"></div>
 
