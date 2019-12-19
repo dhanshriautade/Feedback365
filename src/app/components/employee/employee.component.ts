@@ -13,6 +13,8 @@ export class EmployeeComponent implements OnInit {
   designation;
   empid;
   totalvalue;
+  detail_info;
+  detailem_info;
   constructor(public AuthService: AuthService,private router: Router) { 
     this.name = localStorage.getItem('name');
     this.designation= localStorage.getItem('Designation');
@@ -21,9 +23,21 @@ export class EmployeeComponent implements OnInit {
       this.totalvalue = res;
       // console.log('lsist', this.totalvalue);
     })
+    this.detail_info = {
+    
+        "fromEmpId" : this.empid
+      
+    }
+    this.AuthService.FeedbackSent(this.detail_info ).subscribe(res => {  
+      this.detailem_info =res;
+      console.log(this.detailem_info);
+    })
   }
 
-  showfeedback(){
+  showfeedback(id,name,date){
+    localStorage.setItem('Toid',id);
+    localStorage.setItem('Toname',name);
+    localStorage.setItem('Deudate',date);
     this.router.navigateByUrl('/main/feedback');
   }
 

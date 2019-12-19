@@ -6,8 +6,10 @@
             <div class="col-sm-10 col-md-10 col-lg-10 my-3">
                 <div class="row">
                     <div class="main col-sm-5">
-                        <img class="mr-1 ml-2 " src="../../../assets/logo/qa.png" alt=""> <span class="fed_b">Feedback For :</span> <span class="name"> Sasidhar
-                            samala</span> <span class="feed_b">Due Date</span> : <span class="dtee"> 30 Dec 2019</span>
+                        <img class="mr-1 ml-2 " src="../../../assets/logo/qa.png" alt=""> <span class="fed_b">Feedback For :</span> 
+                        <span class="name"> 
+                                {{toname}}
+                        </span> <span class="feed_b">Due Date</span> : <span class="dtee"> {{Duedate}}</span>
                     </div>
                     <div class="col-sm-7 end">
                         dashboard <img class="mr-1 ml-2" src="../../../assets/logo/ic.png" alt="">
@@ -75,7 +77,7 @@
                                                 Q.{{question[0].questionId}}{{question[0].question}}
                                 </div>
                                 <div class="col-sm-6 my-1">
-                                        <div class="row">
+                                        <div class="row"  #q1>
                                             <div class="col-sm-2">                                           
                                                 <button type="button" (click)="que_1(1,1)" class="btn btn1 btn-light">1</button>        
                                            </div>
@@ -101,7 +103,7 @@
                                                 Q.{{question[1].questionId}}{{question[1].question}}      
                                 </div>
                                 <div class="col-sm-6 my-1">
-                                                <div class="row">
+                                                <div class="row" #q2>
                                                                 <div class="col-sm-2">                                           
                                                                     <button type="button" (click)="que_1(2,1)" class="btn btn1 btn-light">1</button>        
                                                                </div>
@@ -126,7 +128,7 @@
                                                 Q.{{question[2].questionId}}{{question[2].question}}       
                                 </div>
                                 <div class="col-sm-6 my-1">
-                                                <div class="row">
+                                                <div class="row" #q3>
                                                                 <div class="col-sm-2">                                           
                                                                     <button type="button" (click)="que_1(3,1)" class="btn btn1 btn-light">1</button>        
                                                                </div>
@@ -151,7 +153,7 @@
                                                 Q.{{question[3].questionId}}{{question[3].question}}    
                                 </div>
                                 <div class="col-sm-6 my-1">
-                                                <div class="row">
+                                                <div class="row" #q4>
                                                                 <div class="col-sm-2">                                           
                                                                     <button type="button" (click)="que_1(4,1)" class="btn btn1 btn-light">1</button>        
                                                                </div>

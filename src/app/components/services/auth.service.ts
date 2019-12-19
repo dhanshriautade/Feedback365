@@ -18,8 +18,16 @@ export class AuthService {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
      });
-    return this.http.post(environment.Login, data, { headers: headers });
+    return this.http.post(environment.SentAnswer, data, { headers: headers });
   }
+
+  FeedbackSent(data: any){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+     });
+    return this.http.post(environment.feedbacksent, data, { headers: headers });
+  }
+
   SentEvent(data:any){
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
