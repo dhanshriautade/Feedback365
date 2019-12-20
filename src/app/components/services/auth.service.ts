@@ -35,6 +35,14 @@ export class AuthService {
     return this.http.post(environment.SentEvent, data, { headers: headers });
 
   }
+
+  MyReport(data:any){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+     });
+    return this.http.post(environment.myReport, data, { headers: headers });
+
+  }
   GetEvent(){
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'

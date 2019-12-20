@@ -14,7 +14,9 @@ export class EmployeeComponent implements OnInit {
   empid;
   totalvalue;
   detail_info;
+  data;
   detailem_info;
+  my_report;
   constructor(public AuthService: AuthService,private router: Router) { 
     this.name = localStorage.getItem('name');
     this.designation= localStorage.getItem('Designation');
@@ -44,7 +46,15 @@ export class EmployeeComponent implements OnInit {
   ngOnInit() {
   }
   showDialog(){
+    this.data = {
+      "toEmpId":this.empid
+    }
     this.display = true;
+    this.AuthService.MyReport(this.data).subscribe(res => { 
+      this.my_report = res; 
+       console.log('reportMy', this.my_report);
+      console.log('report',this.my_report.questionRewardsDtos[0].question);
+    })
   }
 
 }

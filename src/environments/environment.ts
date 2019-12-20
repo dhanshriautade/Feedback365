@@ -12,7 +12,9 @@ export const environment = {
   SentEvent:url + 'feedback/addForm',
   GetAllQuestion: url + 'feedback/getQuestions',
   feedbacksent: url + 'feedback/getToEmpIds',
-  SentAnswer:url + 'feedback/addFeedback'
+  SentAnswer:url + 'feedback/addFeedback',
+  myReport: url+ 'feedback/getResult'
+
 };
 
 /*

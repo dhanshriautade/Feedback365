@@ -32,7 +32,7 @@
 
             <div class="col-sm-2 Events">
               <div class="num">
-                <div class="count">0 {{totalvalue?.totalEvents}}</div>
+                <div class="count">{{totalvalue?.totalEvents}}</div>
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@
 
             <div class="col-sm-2 col-lg-2 col-md-2 Events">
               <div class="num2">
-                <div class="count"> 0 {{totalvalue?.totalPending}}</div>
+                <div class="count"> {{totalvalue?.totalPending}}</div>
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@
             </div>
             </div>
             </p-dialog>
-        <div class="card-body" *ngIf="EventList">
+        <div class="card-body my-5" *ngIf="EventList">
                
           <table class="table table-striped" style="margin: auto; width: 85%;">
             <thead>
@@ -241,8 +241,9 @@
                       
                     </tbody>
                   </table>  
-                  <pagination-controls (pageChange)="pageChangedfrom($event)"></pagination-controls>
-     
+                  <div class="my-3">
+                  <pagination-controls class="my-3" (pageChange)="pageChangedfrom($event)"></pagination-controls>
+                  </div>
             </div>
             <div class="col-sm-5"> 
               <div class="my-2">
