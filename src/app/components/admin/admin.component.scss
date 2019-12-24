@@ -28,6 +28,8 @@
      .dashboard{
         height: 89vh;
         background-color: #ECEFF1;
+        overflow-x: hidden;
+        overflow-y: scroll;
      }
      .header{
         height: 75px;
@@ -312,9 +314,9 @@
                     .icon{
                         margin-left: 53px;
                     }
-                      .card{
-                        overflow-y: scroll;
-                      }
+                    //   .card{
+                    //     overflow-y: scroll;
+                    //   }
                     .card-header{
                         padding: 0px !important;
                     }
