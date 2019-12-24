@@ -312,7 +312,9 @@
                     .icon{
                         margin-left: 53px;
                     }
-
+                      .card{
+                        overflow-y: scroll;
+                      }
                     .card-header{
                         padding: 0px !important;
                     }

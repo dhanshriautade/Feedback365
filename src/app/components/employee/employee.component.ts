@@ -54,13 +54,19 @@ export class EmployeeComponent implements OnInit {
     this.display = true;
     this.AuthService.MyReport(this.data).subscribe(res => { 
       this.my_report = res; 
+      if(res == null){
+              this.display = false;
+              this.toastr.error('Not Generated Report!')
+              
+           }
+      // console.log(JSON.stringify(res));
      })
-  console.log('res',this.my_report);
-     if(this.my_report == undefined){
-        this.display = false;
-        this.toastr.error('Not Generated Report!')
+  // console.log('res',this.my_report);
+  //    if(this.my_report == undefined){
+  //       this.display = false;
+  //       this.toastr.error('Not Generated Report!')
         
-     }
+  //    }
   }
 
 }

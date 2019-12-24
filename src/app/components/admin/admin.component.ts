@@ -132,14 +132,14 @@ export class AdminComponent implements OnInit {
         
 
 
-        // for(var i=0;i<this.dataInfoSent.length;i++){
-        //   if(this.EventToIdselect==this.dataInfoSent[i].id){
-        //       this.dataInfoSent.splice(this.dataInfoSent[i],1);
-        //   }
-        //   else{
+        for(var i=0;i<this.dataInfoSent.length;i++){
+          if(this.id==this.dataInfoSent[i].id){
+              this.dataInfoSent.splice(this.dataInfoSent[i],1);
+          }
+          else{
 
-        //   }
-        // }
+          }
+        }
         
         console.log('change list', this.dataInfoSent);
      
