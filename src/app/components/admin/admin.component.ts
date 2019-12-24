@@ -124,26 +124,34 @@ export class AdminComponent implements OnInit {
 
     
       onChangeRadio(name:string, id){
-        console.log('from_list',this.dataInfoFrom);
-         this.dataInfoFrom = this.dataInfoFrom;
+        // console.log('from_list',this.dataInfoFrom);
+        //  this.dataInfoFrom = this.dataInfoFrom;
+        this.dataInfoSent = this.dataInfoFrom;
         this.temp = [];
+        
         this.EventToselect = name;
         this.EventToIdselect= id;
-        
-
+        // this.temp=this.dataInfoSent       
+    
 
         for(var i=0;i<this.dataInfoSent.length;i++){
-          if(this.id==this.dataInfoSent[i].id){
-              this.dataInfoSent.splice(this.dataInfoSent[i],1);
+        
+          if(this.EventToIdselect!=this.dataInfoSent[i].id){
+              // this.temp.splice(this.dataInfoSent[i],1);
+              // this.dataInfoSent=this.temp
+              this.temp.push(this.dataInfoSent[i]);
           }
           else{
 
           }
-        }
-        
-        console.log('change list', this.dataInfoSent);
+          console.log('change list', this.dataInfoSent);
      
 
+        }
+           this.dataInfoSent = [];
+          this.dataInfoSent = this.temp;
+          console.log('Proper data',this.dataInfoSent);
+     
       }
       Reset(){
        this.isActive = null;
