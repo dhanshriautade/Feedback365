@@ -107,13 +107,12 @@ export class AdminComponent implements OnInit {
   }
 
 
-  onChange(email:string, id , isChecked: boolean) {
-   
+  onChange(name:string, id , isChecked: boolean) {   
     if(isChecked) {
-      this.DataFormArrayselect.push(email);
+      this.DataFormArrayselect.push(name);
       this.DataIdFormArrayselect.push(id);
     } else {
-      let index = this.DataFormArrayselect.indexOf(email);
+      let index = this.DataFormArrayselect.indexOf(name);
       let indexid = this.DataIdFormArrayselect.indexOf(id);
       this.DataFormArrayselect.splice(index,1);
       this.DataIdFormArrayselect.splice(indexid,1);
@@ -138,8 +137,8 @@ export class AdminComponent implements OnInit {
       this.DataIdFormArray =  null;
      this.EventToselect = null;
       this.EventToIdselect =null;
-      // this.DataFormArrayselect = null;
-      // this.DataIdFormArrayselect = null;
+       this.DataFormArrayselect = null;
+       this.DataIdFormArrayselect = null;
       
       }
 
@@ -149,7 +148,8 @@ export class AdminComponent implements OnInit {
         this.EventToId = this.EventToIdselect;
         this.DataFormArray = this.DataFormArrayselect;
         this.DataIdFormArray =  this.DataIdFormArrayselect;
-      }
+        }
+
       Resetform(){
         this.EventTo = null;
         this.EventToId = null;
@@ -172,8 +172,11 @@ export class AdminComponent implements OnInit {
       this.EventToId = null;
       this.DataFormArray = null;
       this.DataIdFormArray =  null;
-
-     })
+           })
+           this.checkboxes.forEach((element) => {
+            element.nativeElement.checked = false;
+          });
+         
         }
 
   CloseEvent(){

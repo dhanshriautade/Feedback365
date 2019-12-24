@@ -199,10 +199,10 @@
                   
                 <td scope="row" class="name">{{i+1}}</td>
                 <td class="name">{{data?.toEmpName}}</td>
-                <td align="right" class="blue">{{data?.empId}}</td>
-                <td align="right" class="name">{{data?.invited}}</td>
-                <td align="right" class="name">{{data?.received}}</td>
-                <td align="right" class="red">{{data?.pending}}</td>
+                <td align="center" class="blue">{{data?.empId}}</td>
+                <td align="center" class="name">{{data?.invited}}</td>
+                <td align="center" class="name">{{data?.received}}</td>
+                <td align="center" class="red">{{data?.pending}}</td>
                 <td class="name">{{data?.dueDate}}</td>
               </tr>
 
@@ -265,8 +265,8 @@
                       <input #checkboxes type="checkbox" class="form-check-input"  (change)="onChange(data.name, data.id , $event.target.checked)" id="{{data.id}}">
                    </div>
                     </td>
-                    <td align="right" class="blue">{{data.name}}</td>
-                    <td align="right" class="name">{{data.id}}</td>
+                    <td align="center" class="blue">{{data.name}}</td>
+                    <td align="center" class="name">{{data.id}}</td>
                   </tr>
     
                   
@@ -318,7 +318,7 @@
                         </div>
                         <div class="col-sm-9 ">                         
                               <!-- <p-calendar [(ngModel)]="DueDate"  [showIcon]="true" [yearNavigator]="true" yearRange="1900:2019"></p-calendar> -->
-                               <input type="text" class="form-control datebox" [(ngModel)]="DueDate">
+                               <input type="text" class="form-control datebox" placeholder="11/12/2019" [(ngModel)]="DueDate">
                           </div>
                       </div>
 
