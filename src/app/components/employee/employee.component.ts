@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { AuthService } from 'src/app/components/services/auth.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -17,7 +18,7 @@ export class EmployeeComponent implements OnInit {
   data;
   detailem_info;
   my_report;
-  constructor(public AuthService: AuthService,private router: Router) { 
+  constructor(public AuthService: AuthService,private router: Router,private toastr: ToastrService,) { 
     this.name = localStorage.getItem('name');
     this.designation= localStorage.getItem('Designation');
     this.empid = localStorage.getItem('id');
@@ -46,15 +47,20 @@ export class EmployeeComponent implements OnInit {
   ngOnInit() {
   }
   showDialog(){
+    this.display = true;
     this.data = {
       "toEmpId":this.empid
     }
     this.display = true;
     this.AuthService.MyReport(this.data).subscribe(res => { 
       this.my_report = res; 
-       console.log('reportMy', this.my_report);
-      console.log('report',this.my_report.questionRewardsDtos[0].question);
-    })
+     })
+  console.log('res',this.my_report);
+     if(this.my_report == undefined){
+        this.display = false;
+        this.toastr.error('Not Generated Report!')
+        
+     }
   }
 
 }

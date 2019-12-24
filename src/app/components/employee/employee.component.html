@@ -92,7 +92,7 @@
             <div class="p-2 mr-auto auto "><img src="../../../assets/logo/clipboard-list.png" alt=""> My Events </div>
             <div class="p-2">
               <div class="input-group">
-                <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search this blog">
+                <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Event ">
                 <div class="input-group-append">
                   <button class="btn btn-secondary" type="button">
                     <i class="fa fa-search"></i>
@@ -129,16 +129,16 @@
                 Your top areas to improve
                 </div>
                 <div class="col-sm-6 my-1 txt1">
-                1.{{my_report.questionRewardsDtos[0].question}}
+                1.{{my_report?.questionRewardsDtos[0]?.question}}
                 </div>
                 <div class="col-sm-6 my-1 txt">
-                  1.{{my_report.questionRewardsDtos[2].question}}
+                  1.{{my_report?.questionRewardsDtos[2]?.question}}
                 </div>
                 <div class="col-sm-6 my-1 txt1">
-                2.{{my_report.questionRewardsDtos[1].question}}
+                2.{{my_report?.questionRewardsDtos[1]?.question}}
                 </div>
                 <div class="col-sm-6 my-1 txt">
-                2.{{my_report.questionRewardsDtos[3].question}}
+                2.{{my_report?.questionRewardsDtos[3]?.question}}
                 </div>
                 <!-- <div class="col-sm-6 my-1 txt1">
                 3.Delegating

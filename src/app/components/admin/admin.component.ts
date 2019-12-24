@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit }
 import { FormGroup, FormArray, FormControl, FormBuilder} from '@angular/forms';
 import { AuthService } from 'src/app/components/services/auth.service';
 import { ToastrService } from 'ngx-toastr';
+import { VirtualTimeScheduler } from 'rxjs';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -21,6 +22,7 @@ export class AdminComponent implements OnInit {
   EventTo;
   DataFormArray: Array<any> = [];
   DataIdFormArray: Array<any> = [];
+  temp: Array<any> = [];
   DataFormArrayselect: Array<any> = [];
   DataIdFormArrayselect: Array<any> = [];
   config: any;
@@ -122,9 +124,26 @@ export class AdminComponent implements OnInit {
 
     
       onChangeRadio(name:string, id){
+        console.log('from_list',this.dataInfoFrom);
+         this.dataInfoFrom = this.dataInfoFrom;
+        this.temp = [];
         this.EventToselect = name;
         this.EventToIdselect= id;
+        
+
+
+        // for(var i=0;i<this.dataInfoSent.length;i++){
+        //   if(this.EventToIdselect==this.dataInfoSent[i].id){
+        //       this.dataInfoSent.splice(this.dataInfoSent[i],1);
+        //   }
+        //   else{
+
+        //   }
+        // }
+        
+        console.log('change list', this.dataInfoSent);
      
+
       }
       Reset(){
        this.isActive = null;
@@ -176,6 +195,13 @@ export class AdminComponent implements OnInit {
            this.checkboxes.forEach((element) => {
             element.nativeElement.checked = false;
           });
+
+
+          this.DataFormArray=[];
+          this.DataIdFormArrayselect = [];
+          this.DataIdFormArray=[];
+          this.DataFormArrayselect=[];
+          this.DueDate = '';
          
         }
 
